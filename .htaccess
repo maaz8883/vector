@@ -1,0 +1,19 @@
+# Local development (Laragon) — production rules are in .htaccess.production
+# Deploy par: .htaccess.production ko .htaccess ke naam se upload karein
+
+RewriteEngine On
+
+# localhost/vector/ ke liye /vector/ — vector.test vhost ke liye / rakhein
+RewriteBase /vector/
+
+Options -Indexes
+DirectoryIndex index.php
+
+# .php extension URL se hatao
+RewriteCond %{THE_REQUEST} \s/([^.]+)\.php [NC]
+RewriteRule ^ %1 [R=301,L]
+
+# Front controller — sab requests index.php par
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php?page=$1 [L,QSA]

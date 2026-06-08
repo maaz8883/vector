@@ -1,0 +1,687 @@
+/* ============================================================
+   RESPONSIVE.CSS — Full breakpoint coverage
+   Breakpoints: 1199 | 991 | 767 | 575 | 400
+   ============================================================ */
+
+/* ============================================================
+   1200px — large tablets / small laptops
+   ============================================================ */
+@media (max-width: 1199px) {
+
+    /* Header */
+    .navigation ul { gap: 22px; }
+    .navigation ul li a { font-size: 13px; }
+
+    /* Banner */
+    .main-banner { padding: 110px 0 30px; }
+    .main-banner-txt h1 { font-size: 38px; }
+
+    /* Project boxes */
+    .project-box-image img { height: 420px; }
+
+    /* Services */
+    .services-box { padding: 36px 28px; }
+    .our-services-txt h4 { font-size: 26px; }
+    .svc-slider { height: 260px; }
+    .svc-img-main,
+    .svc-img-side { height: 260px; }
+
+    /* About */
+    .about-txt h1 { font-size: 36px; max-width: 100%; }
+
+    /* Pricing */
+    .pricing-card-wrap .pricing-amount { font-size: 46px; }
+
+    /* Process */
+    .process-left { padding-right: 24px; }
+}
+
+/* ============================================================
+   992px — tablet landscape / nav collapse
+   ============================================================ */
+@media (max-width: 1025px) {
+
+    /* Hide entire desktop header bar, show mobile hamburger */
+    .main-header { display: none !important; }
+    .mobile-menu { display: block; }
+    header {
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
+}
+.logo-slider::before {
+    left: 0;
+    background: none;
+}
+.logo-slider::after {
+    left: 0;
+    background: none;
+}
+.click-up-port{display:none}
+}
+
+/* ============================================================
+   991px — tablet portrait
+   ============================================================ */
+@media only screen and (max-width: 991px) {
+
+    /* Navigation — handled by 1025px rule above */
+    .mobile-menu { display: block; }
+
+    .gs-popup-head {
+
+    margin-bottom: 10px;
+}
+.gs-form-group {
+
+    margin-bottom: 0px;
+}
+    .gs-trust-row {
+   
+        display: none;
+    }
+.pricing-popup-head::after {
+
+    display: none;
+
+}
+.pp-form-group {
+    margin-bottom: 0;
+}
+.pp-form-group {
+    display: none;
+
+}
+    /* Banner */
+    .main-banner { padding: 100px 0 0; }
+    .main-banner-txt { text-align: center; margin-bottom: 30px; }
+    .main-banner-txt h1 { font-size: 34px; }
+    .main-banner-txt p { margin: 0 auto 28px; }
+    .main-banner-image img { top: 0; }
+
+    /* About Us */
+    .about-txt { text-align: center; }
+    .about-txt h1 { max-width: 100%; }
+    .about-txt p { max-width: 100%; }
+    .about-btn-group { justify-content: center; }
+    .about-counters { justify-content: center; margin-right: 0; }
+    .about-image { margin-top: 40px; }
+
+    /* Project boxes — single column */
+    .project-box-image img { height: 340px; }
+    .project-box-image { margin-bottom: 20px; }
+
+    /* Services stack */
+    .services-box { padding: 30px 22px; }
+    .out-services-image { margin-top: 30px; }
+    .svc-slider { height: 220px; }
+    .svc-img-main,
+    .svc-img-side { height: 220px; }
+    .our-services-txt ul { grid-template-columns: 1fr; }
+    .our-services-txt { padding-right: 0; }
+
+    /* Marquee */
+    .marquee-word { font-size: 48px; }
+
+    /* About page banner */
+    .about-page-banner { padding: 100px 0 0; }
+    .about-banner-txt { text-align: center; margin-bottom: 30px; }
+    .about-banner-img { text-align: center; }
+
+    /* About intro */
+    .about-intro-lead { font-size: clamp(20px, 4vw, 28px); }
+
+    /* Meet founders */
+    .founders-top { flex-direction: column; gap: 24px; }
+    .founder-card { margin-bottom: 24px; }
+
+    /* Testimonials */
+    .testi-quotemark { display: none; }
+    .testi-quote { font-size: 18px; }
+
+    /* Contact form */
+    .contact-banner-txt { text-align: center; margin-bottom: 30px; }
+
+    /* Industries */
+    .industries-header { text-align: center; }
+
+    /* Why Us */
+    .why-us-top { margin-bottom: 36px; }
+    .why-us-heading { text-align: center; }
+    .why-us-lead,
+    .why-us-desc { text-align: center; }
+
+    /* Pricing */
+    .pricing-card-wrap .pricing-amount { font-size: 44px; }
+    .pricing-card-wrap .pricing-cursor { width: 56px; }
+
+    /* Process — unstack left/right */
+    .process-left {
+        position: static;
+        padding-right: 0;
+        text-align: center;
+        margin-bottom: 48px;
+    }
+    .process-left h2 { color: #1a1040 !important; }
+    .process-left p { color: rgba(26,16,64,0.55) !important; }
+
+    /* Let's Discuss */
+    .ld-inner { flex-direction: column; text-align: center; }
+    .ld-devices { margin-top: 24px; }
+
+    /* Footer */
+    .footer-newsletter h3 { font-size: 22px; }
+    .footer-top .col-md-3,
+    .footer-top .col-md-7 { text-align: center; }
+    .newsletter-form { flex-direction: column; gap: 12px; }
+    .newsletter-form input,
+    .newsletter-form button { width: 100%; border-radius: 8px; }
+
+    /* Support */
+    .support { padding: 60px 0 0; }
+
+    /* Popups */
+    .gs-form-row { grid-template-columns: 1fr; }
+    .pp-form-row { grid-template-columns: 1fr; }
+
+    /* Portfolio topbar */
+    .portfolio-topbar { flex-direction: column; gap: 12px; align-items: flex-start; }
+
+    /* Contact form card */
+    .contact-form-card { padding: 32px 22px; }
+}
+
+/* ============================================================
+   767px — mobile landscape / large phone
+   ============================================================ */
+@media (max-width: 767px) {
+
+    /* General */
+    section { overflow-x: hidden; }
+
+    /* Banner */
+    .main-banner {padding: 160px 0 0;}
+    .main-banner-txt h1 { font-size: 28px; }
+    .main-banner-txt h2 { font-size: 12px; }
+    .main-banner-txt p { font-size: 14px; }
+    .main-banner-txt button { width: 100%; }
+
+    /* Logo slider */
+    .logo-slider .item img { height: 50px; }
+
+    /* Project boxes */
+    .project-box-image img { height: 260px; }
+    .project-boxes { padding: 50px 0; }
+    .project-boxes .stack-row { position: static !important; top: unset !important; }
+
+    /* About */
+    .about-us { padding: 40px 0 60px; }
+    .counter-card { min-width: 100px; }
+    .counter-number { font-size: 44px; }
+    .counter-label { font-size: 13px; }
+    .counter-badge-pill { width: 36px; height: 36px; font-size: 9px; }
+
+    /* Marquee */
+    .marquee-word { font-size: 36px; padding: 0 18px; }
+    .marquee-sep { font-size: 28px; }
+
+    /* Services */
+    .our-services { padding: 60px 0 70px; }
+    .our-services h3 { font-size: 26px; }
+    .services-box { padding: 24px 18px; margin-top: 16px; border-radius: 14px; }
+    .our-services-txt h4 { font-size: 22px; }
+    .our-services-txt p { font-size: 13px; }
+    .svc-slider { height: 180px; }
+    .svc-img-main,
+    .svc-img-side { height: 180px; }
+    /* Stack image below text on mobile */
+    .services-box .row > div:last-child { margin-top: 24px; }
+
+    /* Support */
+    .support h3 { font-size: 28px; }
+    .support p { font-size: 13px; }
+    .support-btn-group { flex-direction: column; align-items: center; }
+    .btn-support { width: 100%; text-align: center; }
+
+    /* Click-up portfolio fan */
+    .click-up-port ul { height: 260px; }
+    .click-up-port ul li { width: 140px; }
+
+    /* Why Us */
+    .why-us { padding: 60px 0 70px; }
+    .why-us-heading { font-size: 26px; }
+    .why-card { padding: 24px 20px; }
+
+    /* Industries */
+    .industries-header h2 { font-size: 26px; }
+
+    /* About page */
+    .about-page-banner {padding: 140px 0 0;}
+    .about-banner-txt h1 { font-size: 28px; }
+    .about-banner-txt p { font-size: 14px; }
+    .about-banner-txt .shimmer-badge-dark,
+    .about-banner-txt .shimmer-badge { font-size: 11px; }
+    .about-intro-lead { font-size: 18px; }
+    .founders-heading { font-size: 28px; }
+    .founders-desc-p { font-size: 13px; }
+
+    /* Testimonials */
+    .testimonials { padding: 50px 0 60px; }
+    .testi-quote { font-size: 16px; }
+    .testi-slide .testi-author { flex-direction: column; gap: 10px; }
+    .testi-page .testi-card { margin-bottom: 20px; }
+
+    /* Contact */
+    .contact-banner { padding: 80px 0 0; }
+    .contact-banner-txt h1 { font-size: 28px; }
+    .cf-group label { font-size: 12px; }
+    .cf-select-wrap select { font-size: 13px; }
+
+    /* FAQ */
+    .faq-section { padding: 50px 0 60px; }
+    .faq-header h2 { font-size: 28px; }
+    .faq-question span { font-size: 14px; }
+
+    /* Let's Discuss */
+    .lets-discuss { padding: 40px 0; }
+    .ld-text h2 { font-size: 36px; }
+    .ld-text p { font-size: 13px; }
+    .ld-devices img { max-width: 280px; margin: 0 auto; display: block; }
+
+    /* Pricing */
+    .pricing-section { padding: 60px 0 70px; }
+    .pricing-header h2 { font-size: 28px; }
+    .pricing-card-wrap .pricing-amount { font-size: 40px; }
+    .pricing-card-wrap .pricing-features { height: 180px; }
+    .pricing-tabs { flex-wrap: wrap; gap: 8px; justify-content: center; }
+    .pricing-tab { font-size: 11px; padding: 7px 12px; }
+
+    /* Process */
+    .process-section { padding: 60px 0 70px; }
+    .process-left h2 { font-size: 26px; }
+    .process-card { padding: 22px 20px; }
+    .process-card h4 { font-size: 17px; }
+    .process-card-num { font-size: 30px; }
+    .process-card-icon { width: 46px; height: 46px; }
+
+    /* Footer */
+    .site-footer .footer-top { padding: 40px 0; }
+    .footer-copy {font-size: 13px;margin-bottom: 10px;}
+    .footer-desc {font-size: 12px;max-width: 100%;}
+    .footer-newsletter h3 { font-size: 20px; }
+    .footer-col-title { font-size: 13px; margin-top: 24px; }
+    .footer-links li a { font-size: 13px; }
+    .footer-email { font-size: 13px; }
+    .footer-bottom { padding: 32px 0 48px; }
+    .footer-logo img { max-height: 36px; }
+    .footer-cursor { display: none; }
+
+    /* Back to top */
+    #btn-back-to-top { bottom: 20px; right: 16px; width: 40px; height: 40px; }
+
+    /* Popup */
+    .gs-popup { padding: 36px 18px 28px; border-radius: 18px; }
+    .gs-popup-title { font-size: 22px; }
+    .gs-trust-row { gap: 8px; }
+    .pricing-popup { padding: 36px 18px 28px; border-radius: 18px; }
+    .pricing-popup-title { font-size: 20px; }
+    .pp-trust-row { gap: 8px; }
+
+    /* Portfolio grid */
+    .portfolio-grid { gap: 16px; }
+    .portfolio-dropdown-wrap { width: 100%; }
+    .portfolio-dropdown { width: 100%; }
+
+    /* Testimonials page cards */
+    .testi-cards-grid .col-md-6 { margin-bottom: 16px; }
+    .testi-card { padding: 24px 20px; }
+    .testi-card p { font-size: 14px; }
+}
+
+/* ============================================================
+   575px — mobile portrait
+   ============================================================ */
+@media (max-width: 575px) {
+
+    /* Global */
+    .container { padding-left: 16px; padding-right: 16px; }
+
+    /* Banner */
+    .main-banner-txt h1 { font-size: 24px; line-height: 1.3; }
+    .main-banner-txt p { font-size: 13px; }
+
+    /* About counters — stack vertically */
+    .about-counters { flex-direction: column; gap: 12px; }
+    .counter-card { min-width: 100%; }
+
+    /* Marquee */
+    .marquee-word { font-size: 28px; padding: 0 12px; }
+
+    /* Services — image pairs side by side still ok, just shorter */
+    .svc-slider { height: 150px; }
+    .svc-img-main,
+    .svc-img-side { height: 150px; }
+
+    /* Project boxes — full height reduce */
+    .project-box-image img { height: 200px; }
+    .project-box-text h2 { font-size: 16px; }
+
+    /* Why cards — single column already, just spacing */
+    .why-card { margin-bottom: 16px; }
+
+    /* Pricing tabs — very small */
+    .pricing-tab { font-size: 10px; padding: 6px 10px; }
+    .pricing-card-wrap .pricing-amount { font-size: 36px; }
+    .pricing-card-wrap .pricing-cursor { width: 44px; }
+
+    /* FAQ */
+    .faq-question span { font-size: 13px; }
+    .faq-answer p { font-size: 13px; }
+
+    /* Let's Discuss */
+    .ld-text h2 { font-size: 28px; }
+
+    /* Process card */
+    .process-card-icon { width: 38px; height: 38px; }
+    .process-card-num { font-size: 26px; }
+    .process-card h4 { font-size: 15px; }
+    .process-card p { font-size: 13px; }
+
+    /* About page */
+    .founders-top { padding: 0; }
+    .founders-top-left,
+    .founders-top-right { width: 100%; }
+    .founder-card { margin-bottom: 20px; }
+    .founder-info h4 { font-size: 18px; }
+
+    /* Contact form */
+    .contact-form-card { padding: 24px 16px; }
+    .cf-submit-row { flex-direction: column; gap: 10px; }
+    .cf-submit-row .btn-contact { width: 100%; }
+    .cf-submit-row .btn-contact-icon { margin: 0 auto; }
+
+    /* Footer */
+    .footer-socials { justify-content: center; margin-top: 12px; }
+    .footer-socials a { width: 34px; height: 34px; font-size: 13px; }
+
+    /* Popups */
+    .gs-trust-item { font-size: 10px; }
+    .pp-trust-item { font-size: 10px; }
+    .gs-popup-subtitle { font-size: 13px; }
+    .pricing-popup-subtitle { font-size: 13px; }
+
+    /* Portfolio view toggle */
+    .portfolio-view-toggle { align-self: flex-end; }
+
+    /* Testimonials page banner */
+    .about-banner-txt h1 { font-size: 24px; }
+    .about-banner-txt p { font-size: 13px; }
+    .about-banner-txt button { width: 100%; }
+}
+
+/* ============================================================
+   400px — very small phones
+   ============================================================ */
+@media (max-width: 400px) {
+
+    .main-banner-txt h1 { font-size: 22px; }
+    .about-txt h1 { font-size: 24px; }
+    .our-services h3 { font-size: 22px; }
+    .support h3 { font-size: 24px; }
+    .ld-text h2 { font-size: 24px; }
+    .pricing-header h2 { font-size: 22px; }
+    .process-left h2 { font-size: 22px; }
+    .why-us-heading { font-size: 22px; }
+    .faq-header h2 { font-size: 24px; }
+
+    .svc-slider { height: 130px; }
+    .svc-img-main,
+    .svc-img-side { height: 130px; }
+
+    .marquee-word { font-size: 22px; padding: 0 8px; }
+    .marquee-sep { font-size: 20px; }
+
+    .gs-popup { padding: 28px 14px 22px; }
+    .pricing-popup { padding: 28px 14px 22px; }
+
+    .btn-contact { padding: 10px 18px; font-size: 13px; }
+    .btn-know { padding: 10px 20px; font-size: 13px; }
+
+    .why-card { padding: 20px 16px; }
+    .process-card { padding: 18px 16px; }
+}
+
+/* ============================================================
+   Utilities — always applied regardless of breakpoint
+   ============================================================ */
+
+/* Hide desktop nav at mobile sizes */
+@media (max-width: 1025px) {
+    .main-header { display: none !important; }
+    .mobile-menu { display: block !important; }
+}
+
+/* Process left — never sticky on mobile */
+@media (max-width: 991px) {
+    .process-left { position: static !important; }
+}
+
+/* Services btn — full width on small screens */
+@media (max-width: 767px) {
+    .our-services-txt button { width: 100% !important; }
+    .about-banner-txt button  { width: auto; }
+}
+
+/* Stack project box columns on small screens */
+@media (max-width: 767px) {
+    .project-boxes .row > div { margin-bottom: 16px; }
+    .project-boxes .row > div:last-child { margin-bottom: 0; }
+}
+
+/* Mobile nav dropdown inside side menu */
+.mobile-menu .nav-has-dropdown .nav-dropdown {
+    position: static !important;
+    transform: none !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    background: rgba(26,16,64,0.06);
+    border-radius: 8px;
+    padding: 6px 0 6px 16px;
+    box-shadow: none;
+    min-width: 0;
+    /* override the desktop display:flex !important */
+    display: none !important;
+    flex-direction: column;
+}
+.mobile-menu .nav-has-dropdown.open .nav-dropdown {
+    display: flex !important;
+    flex-direction: column !important;
+}
+.mobile-menu .nav-has-dropdown .nav-dropdown li a {
+    color: #1a1040 !important;
+    -webkit-text-fill-color: #1a1040 !important;
+    font-size: 13px;
+    padding: 8px 12px;
+}
+.mobile-menu .nav-has-dropdown > a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Pricing popup responsive */
+@media (max-width: 575px) {
+    .pp-form-row { grid-template-columns: 1fr !important; }
+    .gs-form-row { grid-template-columns: 1fr !important; }
+}
+
+/* ============================================================
+   RESPONSIVE AUDIT FIXES
+   ============================================================ */
+
+/* ── Mobile hamburger circle — always visible, correct position ── */
+@media (max-width: 1025px) {
+    .mobile-menu .circle {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        z-index: 9999;
+        width: 44px;
+        height: 44px;
+    }
+   
+}
+
+/* ── About page banner — text overlaps image on tablet ── */
+@media (max-width: 991px) {
+    .about-page-banner .row { flex-direction: column; }
+    .about-page-banner .about-banner-txt { order: 1; }
+    .about-page-banner .about-banner-img {order: 2;text-align: center;margin-top: 24px;display: none;}
+    .about-page-banner .about-banner-img img { max-width: 80%; }
+}
+
+/* ── Contact banner — image below text on mobile ── */
+@media (max-width: 991px) {
+    .contact-banner .row { flex-direction: column; }
+    .contact-banner-txt {order: 1;text-align: center;padding-top: 80px;}
+    .contact-banner-img {order: 2;text-align: center;margin-top: 24px;display: none;}
+    .contact-banner-img img { max-width: 80%; }
+    .contact-banner-btns { justify-content: center; }
+}
+
+/* ── Contact form — full width fields on small screens ── */
+@media (max-width: 767px) {
+    .contact-form-section { padding: 40px 0 60px; }
+    .contact-form-card { padding: 28px 18px; border-radius: 14px; }
+    .cf-group { margin-bottom: 16px; }
+    .cf-group input,
+    .cf-group textarea,
+    .cf-select-wrap select { font-size: 14px; }
+    /* Stack the two select dropdowns */
+    .contact-form-card .col-md-6 { flex: 0 0 100%; max-width: 100%; }
+}
+
+/* ── Testimonials banner — stray backslash causes line break ── */
+@media (max-width: 767px) {
+    .testi-page { padding: 40px 0 60px; }
+    .testi-card { margin-bottom: 20px; }
+    .testi-card-footer { flex-direction: column; gap: 12px; align-items: flex-start; }
+}
+
+/* ── Let's Discuss — image overflows on small screens ── */
+@media (max-width: 767px) {
+    .lets-discuss { padding: 50px 0 0; overflow: hidden; }
+    .ld-inner {gap: 24px;padding: 0px 24px 0;}
+    .ld-text h2 { font-size: 32px; }
+    .ld-text p { font-size: 14px; }
+    .ld-devices { width: 100%; text-align: center; }
+    .ld-devices img { max-width: 300px; width: 100%; }
+}
+@media (max-width: 575px) {
+    .ld-text h2 { font-size: 26px; }
+    .ld-devices img { max-width: 240px; }
+}
+
+/* ── About intro image — full width, no overflow ── */
+@media (max-width: 767px) {
+    .about-intro { padding: 40px 0 50px; }
+    .about-intro-lead { font-size: 16px; margin-bottom: 28px; }
+    .about-intro-img img { border-radius: 12px; }
+}
+
+/* ── Industries slider — header stacks on mobile ── */
+@media (max-width: 767px) {
+    .our-industries { padding: 40px 0 50px; }
+    .industries-header h2 { font-size: 22px; margin-top: 10px; }
+    .industry-item p { font-size: 12px; }
+}
+
+/* ── Why Us cards — single column on mobile ── */
+@media (max-width: 575px) {
+    .why-us-cards .col-md-4,
+    .why-us-cards .col-sm-6 { flex: 0 0 100%; max-width: 100%; }
+    .why-card { margin-bottom: 16px; }
+    .why-us-lead { font-size: 18px; }
+}
+
+/* ── Pricing section — tabs overflow on small screens ── */
+@media (max-width: 575px) {
+    .pricing-tabs {
+        overflow-x: auto;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+        padding-bottom: 4px;
+        justify-content: flex-start;
+    }
+    .pricing-tab { flex-shrink: 0; }
+    .pricing-card-wrap .pricing-features { height: 160px; }
+}
+
+/* ── Process cards — full width on mobile ── */
+@media (max-width: 767px) {
+    .process-section { padding: 50px 0 60px; }
+    .process-cards { gap: 0; }
+    .process-card { margin-top: 16px; position: static !important; top: unset !important; }
+    .process-card:first-child { margin-top: 0; }
+}
+
+/* ── Portfolio page — single column grid on mobile ── */
+@media (max-width: 767px) {
+    .portfolio-page { padding: 40px 0 60px; }
+    .portfolio-grid { grid-template-columns: 1fr !important; }
+    .portfolio-grid .project-box-image img { height: 220px; }
+    .portfolio-topbar { gap: 14px; }
+}
+@media (max-width: 575px) {
+    .portfolio-topbar > div { width: 100%; justify-content: space-between; }
+}
+
+/* ── Footer columns — stack on mobile ── */
+@media (max-width: 767px) {
+    .footer-bottom .col-md-2,
+    .footer-bottom .col-md-3 { flex: 0 0 50%; max-width: 50%; margin-bottom: 24px; }
+    .footer-bottom .col-md-3:first-child { flex: 0 0 100%; max-width: 100%; }
+    .footer-newsletter { text-align: center; }
+    .newsletter-form { max-width: 400px; margin: 0 auto; }
+}
+@media (max-width: 400px) {
+    .footer-bottom .col-md-2,
+    .footer-bottom .col-md-3 { flex: 0 0 100%; max-width: 100%; }
+}
+
+/* ── Popup overlays — max-width on very small screens ── */
+@media (max-width: 400px) {
+    .gs-popup,
+    .pricing-popup { padding: 24px 12px 20px; border-radius: 14px; }
+    .gs-popup-title,
+    .pricing-popup-title { font-size: 18px; }
+    .gs-popup-submit,
+    .pp-submit { font-size: 14px; padding: 12px; }
+}
+
+/* ── Services service cards image — prevent overlap on 991px ── */
+@media (max-width: 991px) {
+    .services-box .col-md-6 { flex: 0 0 100%; max-width: 100%; }
+    .out-services-image { margin-top: 24px; }
+}
+
+/* ── Why-us top row — stack on tablet ── */
+@media (max-width: 991px) {
+    .why-us-top .col-md-5,
+    .why-us-top .col-md-7 { flex: 0 0 100%; max-width: 100%; }
+    .why-us-top .col-md-5 { margin-bottom: 20px; }
+}
+
+/* ── Project boxes — columns stack on mobile ── */
+@media (max-width: 767px) {
+    .project-box-image { margin-bottom: 16px; }
+    .stack-row .col-md-6 { flex: 0 0 100%; max-width: 100%; }
+}
+
+/* ── Banner image — hide on very small to avoid overflow ── */
+@media (max-width: 400px) {
+    .main-banner-image { display: none; }
+    .main-banner-txt { text-align: center; }
+    .main-banner-txt button { width: 100%; }
+}
