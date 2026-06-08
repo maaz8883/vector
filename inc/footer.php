@@ -38,21 +38,7 @@
            
 
            <!-- Form -->
-           <form class="gs-popup-form" id="gsPopupForm" action="inc/form.php" method="POST">
-               <input type="hidden" name="cta1" value="1">
-               <input type="hidden" name="subject" value="New Lead - Get Started Popup">
-               <input type="hidden" name="url" value="">
-               <input type="hidden" name="domain" value="">
-               <input type="hidden" name="ip" value="">
-               <input type="hidden" name="city" value="">
-               <input type="hidden" name="region" value="">
-               <input type="hidden" name="country" value="">
-               <input type="hidden" name="first_source" value="">
-               <input type="hidden" name="first_medium" value="">
-               <input type="hidden" name="first_campaign" value="">
-               <input type="hidden" name="last_source" value="">
-               <input type="hidden" name="last_medium" value="">
-               <input type="hidden" name="last_campaign" value="">
+           <form class="gs-popup-form site-query-form" id="gsPopupForm" data-source="get_started_popup">
 
                <div class="gs-form-row">
                    <!-- Name -->
@@ -137,21 +123,7 @@
            </div>
 
            <!-- Form -->
-           <form class="pricing-popup-form" action="inc/form.php" method="POST">
-               <input type="hidden" name="cta1" value="1">
-               <input type="hidden" name="subject" value="New Lead - Pricing Package">
-               <input type="hidden" name="url" value="">
-               <input type="hidden" name="domain" value="">
-               <input type="hidden" name="ip" value="">
-               <input type="hidden" name="city" value="">
-               <input type="hidden" name="region" value="">
-               <input type="hidden" name="country" value="">
-               <input type="hidden" name="first_source" value="">
-               <input type="hidden" name="first_medium" value="">
-               <input type="hidden" name="first_campaign" value="">
-               <input type="hidden" name="last_source" value="">
-               <input type="hidden" name="last_medium" value="">
-               <input type="hidden" name="last_campaign" value="">
+           <form class="pricing-popup-form site-query-form" id="pricingPopupForm" data-source="pricing_popup">
 
                <div class="pp-form-row">
                    <div class="pp-form-group">
@@ -398,6 +370,7 @@
     });
     observer.observe();
 </script>
+<script src="assets/js/api.js"></script>
 <script src="assets/js/custom.js"></script>
 
 </body>

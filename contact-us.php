@@ -34,42 +34,48 @@
     <section class="contact-form-section">
         <div class="container">
             <div class="contact-form-card">
-
+                <form class="site-query-form" id="contactUsForm" data-source="contact_us">
                 <div class="row">
                     <!-- First Name / Last Name -->
                     <div class="col-md-6 col-12">
                         <div class="cf-group">
-                            <label>First Name?</label>
-                            <input type="text" placeholder="Adam">
+                            <label for="cu_first_name">First Name?</label>
+                            <input type="text" id="cu_first_name" name="first_name" placeholder="Adam" required>
                         </div>
                     </div>
                     <div class="col-md-6 col-12">
                         <div class="cf-group">
-                            <label>Last Name?</label>
-                            <input type="text" placeholder="Kingdoom">
+                            <label for="cu_last_name">Last Name?</label>
+                            <input type="text" id="cu_last_name" name="last_name" placeholder="Kingdoom" required>
                         </div>
                     </div>
 
-                    <!-- How did we reach you -->
-                    <div class="col-12">
+                    <!-- Email / Phone -->
+                    <div class="col-md-6 col-12">
                         <div class="cf-group">
-                            <label>How can we reach you?</label>
-                            <input type="email" placeholder="Your email address / phone">
+                            <label for="cu_email">Email Address</label>
+                            <input type="email" id="cu_email" name="email" placeholder="you@example.com" required>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-12">
+                        <div class="cf-group">
+                            <label for="cu_phone">Phone Number</label>
+                            <input type="tel" id="cu_phone" name="phone" placeholder="+1 (555) 000-0000" required>
                         </div>
                     </div>
 
                     <!-- Where are you from / What type of service -->
                     <div class="col-md-6 col-12">
                         <div class="cf-group">
-                            <label>Where Are you From?</label>
+                            <label for="cu_country">Where Are you From?</label>
                             <div class="cf-select-wrap">
-                                <select>
+                                <select id="cu_country" name="country">
                                     <option value="" disabled selected>Select Country / State...</option>
-                                    <option>United States</option>
-                                    <option>United Kingdom</option>
-                                    <option>Canada</option>
-                                    <option>Australia</option>
-                                    <option>Other</option>
+                                    <option value="United States">United States</option>
+                                    <option value="United Kingdom">United Kingdom</option>
+                                    <option value="Canada">Canada</option>
+                                    <option value="Australia">Australia</option>
+                                    <option value="Other">Other</option>
                                 </select>
                                 <i class="fa fa-chevron-down"></i>
                             </div>
@@ -77,15 +83,15 @@
                     </div>
                     <div class="col-md-6 col-12">
                         <div class="cf-group">
-                            <label>What's a type of your company?</label>
+                            <label for="cu_company_type">What's a type of your company?</label>
                             <div class="cf-select-wrap">
-                                <select>
+                                <select id="cu_company_type" name="company_type">
                                     <option value="" disabled selected>Select Company Type...</option>
-                                    <option>Startup</option>
-                                    <option>Small Business</option>
-                                    <option>Enterprise</option>
-                                    <option>Freelancer</option>
-                                    <option>Other</option>
+                                    <option value="Startup">Startup</option>
+                                    <option value="Small Business">Small Business</option>
+                                    <option value="Enterprise">Enterprise</option>
+                                    <option value="Freelancer">Freelancer</option>
+                                    <option value="Other">Other</option>
                                 </select>
                                 <i class="fa fa-chevron-down"></i>
                             </div>
@@ -95,23 +101,22 @@
                     <!-- Message -->
                     <div class="col-12">
                         <div class="cf-group">
-                            <label>Message</label>
-                            <textarea rows="5" placeholder="Write a message..."></textarea>
+                            <label for="cu_message">Message</label>
+                            <textarea id="cu_message" name="message" rows="5" placeholder="Write a message..."></textarea>
                         </div>
                     </div>
 
                     <!-- Submit -->
                     <div class="col-12">
                         <div class="cf-submit-row">
-                            <button class="btn-contact cf-submit">Send Message</button>
-                            
+                            <button class="btn-contact cf-submit" type="submit">Send Message</button>
                         </div>
                     </div>
 
                 </div>
+                </form>
             </div>
         </div>
     </section>
 
       
- 
