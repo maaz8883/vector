@@ -43,7 +43,7 @@
                     <h2>Website Maintenance For <span>Every Industry</span></h2>
                 </div>
             </div>
-            <!-- Full-width slider � no container -->
+            <!-- Full-width slider   no container -->
             <div class="industries-slider">
                 <div class="owl-carousel industries-owl">
                     <div class="industry-item">
@@ -139,7 +139,7 @@
                         <div class="col-md-6 col-sm-6 col-lg-6 col-12">
                             <div class="our-services-txt">
                                 <h4>Performance Optimization</h4>
-                                <p>Improve your website�s speed, responsiveness, and overall efficiency with ongoing performance optimization. We identify and resolve issues that may affect loading times, ensuring a faster, smoother experience for your visitors across all devices.</p>
+                                <p>Improve your website s speed, responsiveness, and overall efficiency with ongoing performance optimization. We identify and resolve issues that may affect loading times, ensuring a faster, smoother experience for your visitors across all devices.</p>
                                 <button class="btn-know">Get Started</button>
                             </div>
                         </div>
@@ -224,7 +224,7 @@
             <div class="container">
                 <h2>Why Choose Us</h2>
                 <h3>Here When You<br>Need Us  <span>Most</span></h3>
-                <p>We don't just create designs�we build digital experiences that help businesses grow. Our team combines creativity, technology, and marketing expertise to deliver solutions that generate real results.</p>
+                <p>We don't just create designs we build digital experiences that help businesses grow. Our team combines creativity, technology, and marketing expertise to deliver solutions that generate real results.</p>
                 <div class="support-btn-group">
                     <button class="btn-support">Let's Discuss</button>
                  
@@ -338,7 +338,7 @@
 
     
 
-    <!-- PROCESS SECTION � left text, right sticky stack cards -->
+    <!-- PROCESS SECTION   left text, right sticky stack cards -->
     <section>
         <div class="process-section">
             <div class="container">
@@ -380,7 +380,7 @@
                                     <div class="process-card-icon process-card-icon-fa"><i class="fas fa-wrench"></i></div><span class="process-card-num">03</span>
                                 </div>
                                 <h4>Updates & Fixes</h4>
-                                <p>We perform regular updates to your website�s core system, plugins, themes, and content to ensure everything remains secure and fully functional. Our team also identifies and resolves technical issues before they impact your website�s performance.</p>
+                                <p>We perform regular updates to your website s core system, plugins, themes, and content to ensure everything remains secure and fully functional. Our team also identifies and resolves technical issues before they impact your website s performance.</p>
                             </div>
 
                             <div class="process-card">
@@ -396,7 +396,7 @@
                                     <div class="process-card-icon process-card-icon-fa"><i class="fas fa-file-alt"></i></div><span class="process-card-num">05</span>
                                 </div>
                                 <h4>Reporting & Support</h4>
-                                <p>We provide regular reports to keep you informed about your website�s performance, updates, and overall health. This transparency ensures you always know what work has been done and how your website is improving.</p>
+                                <p>We provide regular reports to keep you informed about your website s performance, updates, and overall health. This transparency ensures you always know what work has been done and how your website is improving.</p>
                             </div>
 
                         </div>

@@ -384,27 +384,23 @@ function backToTop() {
     });
 })();
 
-// ── PORTFOLIO FILTER + VIEW TOGGLE ──
+// ── PORTFOLIO FILTER TABS ──
 (function () {
-    var dropdown = document.getElementById('portfolioFilter');
-    var grid     = document.getElementById('portfolioGrid');
-    var btnGrid  = document.getElementById('viewGrid');
-    var btnList  = document.getElementById('viewList');
-    var countEl  = document.getElementById('portfolioCount');
-    if (!dropdown || !grid) return;
+    var grid    = document.getElementById('portfolioGrid');
+    var countEl = document.getElementById('portfolioCount');
+    var tabs    = document.querySelectorAll('.pf-tab');
+    if (!grid || !tabs.length) return;
 
-    function updateCount() {
+    function updateCount(filter) {
         if (!countEl) return;
         var visible = grid.querySelectorAll('.pf-item:not(.hidden)').length;
         var total   = grid.querySelectorAll('.pf-item').length;
-        countEl.textContent = visible === total
+        countEl.textContent = filter === 'all'
             ? 'Showing all ' + total + ' works'
             : 'Showing ' + visible + ' of ' + total + ' works';
     }
 
-    // Filter by dropdown
-    dropdown.addEventListener('change', function () {
-        var filter = this.value;
+    function filterGrid(filter) {
         grid.querySelectorAll('.pf-item').forEach(function (item) {
             if (filter === 'all' || item.getAttribute('data-category') === filter) {
                 item.classList.remove('hidden');
@@ -412,25 +408,21 @@ function backToTop() {
                 item.classList.add('hidden');
             }
         });
-        updateCount();
+        updateCount(filter);
+    }
+
+    tabs.forEach(function (tab) {
+        tab.addEventListener('click', function () {
+            // Update active state
+            tabs.forEach(function (t) { t.classList.remove('active'); });
+            this.classList.add('active');
+            // Filter
+            filterGrid(this.getAttribute('data-filter'));
+        });
     });
 
-    // Grid view
-    btnGrid.addEventListener('click', function () {
-        grid.classList.remove('list-view');
-        btnGrid.classList.add('active');
-        btnList.classList.remove('active');
-    });
-
-    // List view
-    btnList.addEventListener('click', function () {
-        grid.classList.add('list-view');
-        btnList.classList.add('active');
-        btnGrid.classList.remove('active');
-    });
-
-    // Init count on load
-    updateCount();
+    // Init on load — show all
+    filterGrid('all');
 })();
 
 // ── INDUSTRIES SLIDER ──

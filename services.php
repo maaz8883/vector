@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Our Services � Logo Vector Design</title>
+    <title>Our Services   Logo Vector Design</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
@@ -93,7 +93,7 @@
                     <div class="about-banner-txt">
                         <span class="shimmer-badge shimmer-badge-dark">Our Services</span>
                         <h1>Empowering Your <span>Digital Growth</span></h1>
-                        <p>From logo design to full digital experiences � we craft solutions that move your brand forward.</p>
+                        <p>From logo design to full digital experiences   we craft solutions that move your brand forward.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 col-lg-6 col-12">
@@ -128,7 +128,7 @@
                     <h2>Visual Branding For <span>Every Industry</span></h2>
                 </div>
             </div>
-            <!-- Full-width slider � no container -->
+            <!-- Full-width slider   no container -->
             <div class="industries-slider">
                 <div class="owl-carousel industries-owl">
                     <div class="industry-item">
@@ -566,7 +566,7 @@
         </div>
     </section>
 
-    <!-- PROCESS SECTION � left text, right sticky stack cards -->
+    <!-- PROCESS SECTION   left text, right sticky stack cards -->
     <section>
         <div class="process-section">
             <div class="container">

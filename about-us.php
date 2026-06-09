@@ -20,7 +20,7 @@
         <div class="about-banner-fade"></div>
     </section>
 
-    <!-- MARQUEE � reusing exact same markup + CSS from index -->
+    <!-- MARQUEE   reusing exact same markup + CSS from index -->
     <section class="home-marquee-section">
         <div class="home-marquee">
             <div class="marquee-track">

@@ -332,6 +332,7 @@
     .portfolio-grid { gap: 16px; }
     .portfolio-dropdown-wrap { width: 100%; }
     .portfolio-dropdown { width: 100%; }
+    .portfolio-filter-bar { justify-content: flex-start; }
 
     /* Testimonials page cards */
     .testi-cards-grid .col-md-6 { margin-bottom: 16px; }
@@ -629,12 +630,27 @@
 /* ── Portfolio page — single column grid on mobile ── */
 @media (max-width: 767px) {
     .portfolio-page { padding: 40px 0 60px; }
-    .portfolio-grid { grid-template-columns: 1fr !important; }
-    .portfolio-grid .project-box-image img { height: 220px; }
+    .portfolio-grid { grid-template-columns: 1fr 1fr !important; gap: 12px; }
+    .portfolio-grid .project-box-image img { height: 180px; }
     .portfolio-topbar { gap: 14px; }
+    .portfolio-section-title { font-size: 26px; }
+    .portfolio-filter-bar { gap: 6px; }
+    .pf-tab { padding: 7px 14px; font-size: 12px; }
 }
 @media (max-width: 575px) {
     .portfolio-topbar > div { width: 100%; justify-content: space-between; }
+    .portfolio-grid { grid-template-columns: 1fr !important; gap: 12px; }
+    .portfolio-grid .project-box-image img { height: 220px; }
+    .portfolio-section-title { font-size: 22px; }
+    .portfolio-section-sub { font-size: 13px; }
+    .portfolio-filter-bar { gap: 6px; justify-content: flex-start; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; -webkit-overflow-scrolling: touch; }
+    .pf-tab { flex-shrink: 0; padding: 7px 14px; font-size: 12px; }
+}
+
+/* ── Portfolio grid — 2 columns on tablet ── */
+@media (max-width: 991px) and (min-width: 768px) {
+    .portfolio-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 16px; }
+    .portfolio-grid .project-box-image img { height: 200px; }
 }
 
 /* ── Footer columns — stack on mobile ── */

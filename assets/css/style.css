@@ -2764,56 +2764,94 @@ header {
     pointer-events: none;
 }
 
-/* Grid / List toggle */
-.portfolio-view-toggle {
-    display: flex;
-    gap: 8px;
+/* Grid / List toggle — removed */
+
+/* ── Filter section header ── */
+.portfolio-filter-header {
+    text-align: center;
+    margin-bottom: 36px;
 }
-.pv-btn {
-    background: rgba(255,255,255,0.05);
-    border: 1.5px solid rgba(255,255,255,0.15);
-    color: rgba(255,255,255,0.55);
-    padding: 8px 20px;
-    border-radius: 8px;
+.portfolio-section-title {
+    font-size: clamp(28px, 3.5vw, 46px);
+    font-weight: 400;
+    color: #1a1040;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+.portfolio-section-title span {
+    background: linear-gradient(130deg, #de2aad, #f97316);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    font-weight: 700;
+}
+.portfolio-section-sub {
+    font-size: 14px;
+    color: rgba(26,16,64,0.5);
+    font-weight: 500;
+    margin: 0;
+}
+
+/* ── Filter tab bar ── */
+.portfolio-filter-bar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+.pf-tab {
+    background: rgba(26,16,64,0.05);
+    border: 1.5px solid rgba(26,16,64,0.1);
+    color: rgba(26,16,64,0.6);
+    padding: 9px 20px;
+    border-radius: 30px;
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
     font-family: 'Wix Madefor Display', sans-serif;
-    transition: all 0.25s ease;
+    transition: all 0.22s ease;
+    white-space: nowrap;
 }
-.pv-btn.active {
-    background: linear-gradient(135deg, #ff2d78, #f97316);
+.pf-tab:hover {
+    border-color: rgba(222,42,173,0.4);
+    color: #de2aad;
+    background: rgba(222,42,173,0.05);
+}
+.pf-tab.active {
+    background: linear-gradient(130deg, #de2aad, #f97316);
     border-color: transparent;
     color: #fff;
-    box-shadow: 0 4px 14px rgba(255,45,120,0.35);
-}
-.pv-btn:hover:not(.active) {
-    border-color: rgba(255,255,255,0.35);
-    color: #fff;
+    box-shadow: 0 4px 14px rgba(222,42,173,0.35);
 }
 
-/* ── Grid layout — 2 columns, reuses project-box-image styles ── */
+/* ── Grid layout — 4 columns ── */
 .portfolio-grid {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
 }
 .portfolio-grid .pf-item {
     transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .portfolio-grid .pf-item.hidden {
-    display: none;
+    display: none !important;
 }
 .portfolio-grid .project-box-image img {
-    height: 380px;
-}
-
-/* ── List layout ── */
-.portfolio-grid.list-view {
-    grid-template-columns: 1fr;
-}
-.portfolio-grid.list-view .project-box-image img {
     height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    width: 100%;
+}
+.portfolio-grid .project-box-image {
+    border-radius: 12px;
+}
+.portfolio-grid .project-box-text h2 {
+    font-size: 14px;
+}
+.portfolio-grid .project-box-text p {
+    font-size: 12px;
 }
 
 /* ── Portfolio page — white background overrides ── */
@@ -2831,21 +2869,12 @@ header {
     color: rgba(26,16,64,0.4);
 }
 
-/* Toggle buttons dark on white bg */
-.pv-btn {
-    background: rgba(26,16,64,0.04);
-    border-color: rgba(26,16,64,0.15);
-    color: rgba(26,16,64,0.55);
-}
-.pv-btn:hover:not(.active) {
-    border-color: rgba(26,16,64,0.35);
-    color: #1a1040;
-}
+/* Toggle buttons — removed (replaced by tab bar) */
 
-/* Project cards on white — keep dark overlay on image */
+/* Project cards on white */
 .portfolio-grid .project-box-image img {
-    height: 380px;
-    border-radius: 16px;
+    height: 220px;
+    border-radius: 12px;
 }
 
 /* ============================================================
@@ -4903,7 +4932,8 @@ header {
     color: rgba(26,16,64,0.45);
     font-weight: 500;
     margin-top: 10px;
-    margin-bottom: 0;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
 /* Uniform image height across all portfolio cards */
@@ -4914,10 +4944,7 @@ header {
     border-radius: 16px;
 }
 
-@media (max-width: 767px) {
-    .portfolio-grid { grid-template-columns: 1fr; }
-    .portfolio-grid .project-box-image img { height: 220px; }
-}
+/* Portfolio responsive rules are handled in responsive.css */
 
 /* ── Lozad lazy load — fade in on load ── */
 .lozad { opacity: 0; transition: opacity 0.4s ease; }

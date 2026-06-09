@@ -1,4 +1,5 @@
 
+
     <!-- PORTFOLIO BANNER -->
     <section class="about-page-banner">
         <div class="container">
@@ -7,7 +8,7 @@
                     <div class="about-banner-txt">
                         <span class="shimmer-badge shimmer-badge-dark">Our Portfolio</span>
                         <h1>Work That Speaks <span>For Itself</span></h1>
-                        <p>Explore our collection of projects � from brand identities to full digital experiences, each crafted with purpose.</p>
+                        <p>Explore our collection of projects  from brand identities to full digital experiences, each crafted with purpose.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-sm-12 col-lg-6 col-12">
@@ -25,30 +26,25 @@
         <div class="portfolio-page">
             <div class="container">
 
-                <!-- Top bar: dropdown left, grid/list toggle right -->
-                <div class="portfolio-topbar">
-                    <div class="portfolio-dropdown-wrap">
-                        <select class="portfolio-dropdown" id="portfolioFilter">
-                            <option value="all">View All Works</option>
-                            <option value="logo">Logo Design</option>
-                            <option value="web">Website Design</option>
-                            <option value="maintenance">Website Maintenance</option>
-                            <option value="motion">Video Animation</option>
-                            <option value="ecommerce">Ecommerce Website</option>
-                            <option value="marketing">Digital Marketing</option>
-                        </select>
-                        <i class="fa fa-chevron-down"></i>
-                    </div>
-                    <div style="display:flex;align-items:center;gap:16px;">
-                        <p class="portfolio-count" id="portfolioCount"></p>
-                        <div class="portfolio-view-toggle">
-                            <button class="pv-btn active" id="viewGrid" aria-label="Grid view">Grid</button>
-                            <button class="pv-btn" id="viewList" aria-label="List view">List</button>
-                        </div>
-                    </div>
+                <!-- Filter section title -->
+                <div class="portfolio-filter-header">
+                    <h2 class="portfolio-section-title">Explore Our <span>Work</span></h2>
+                    <p class="portfolio-section-sub">Click a category to filter by service type</p>
                 </div>
 
-                <!-- Grid -->
+                <!-- Filter tab bar -->
+                <div class="portfolio-filter-bar">
+                    <button class="pf-tab active" data-filter="all">All Works</button>
+                    <button class="pf-tab" data-filter="logo">Logo Design</button>
+                    <button class="pf-tab" data-filter="web">Website Design</button>
+                    <button class="pf-tab" data-filter="maintenance">Website Maintenance</button>
+                    <button class="pf-tab" data-filter="motion">Video Animation</button>
+                    <button class="pf-tab" data-filter="ecommerce">Ecommerce Website</button>
+                    <button class="pf-tab" data-filter="marketing">Digital Marketing</button>
+                </div>
+                <p class="portfolio-count" id="portfolioCount"></p>
+
+                <!-- Grid — 4 per row -->
                 <div class="portfolio-grid" id="portfolioGrid">
 
                     <!-- -- LOGO DESIGN -- -->

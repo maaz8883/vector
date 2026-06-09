@@ -8,7 +8,7 @@
                     <div class="about-banner-txt">
                         <span class="shimmer-badge shimmer-badge-dark">Testimonials</span>
                         <h1>Real Results <span>Real Success Stories.</span></h1>
-                        <p>We take pride in delivering high-quality digital solutions that help businesses grow and succeed. Our clients� feedback reflects our commitment to creativity, performance, and excellence across every project.</p>\
+                        <p>We take pride in delivering high-quality digital solutions that help businesses grow and succeed. Our clients  feedback reflects our commitment to creativity, performance, and excellence across every project.</p>\
                                             <button class="btn-know">Get Started</button>
 
                     </div>
@@ -37,7 +37,7 @@
                     <div class="col-md-7 col-sm-12 col-lg-7 col-12">
                         <span class="testi-badge shimmer-badge">Testimonials</span>
                         <blockquote class="testi-quote">
-�Logo Vector Design delivered a stunning website that perfectly represents our brand. The design is modern, fast, and user-friendly. Highly recommended for anyone looking to grow their online presence.�                        </blockquote>
+ Logo Vector Design delivered a stunning website that perfectly represents our brand. The design is modern, fast, and user-friendly. Highly recommended for anyone looking to grow their online presence.                         </blockquote>
                         <div class="testi-author">
                             <div>
                                 <strong>Robert Smith</strong>
@@ -66,7 +66,7 @@
 
                     <div class="col-md-6 col-sm-12 col-lg-6 col-12">
                         <div class="testi-card">
-                            <p>�The video animation they created for our business was beyond expectations. It clearly communicated our message and helped us attract more customers. Great creativity and professionalism!�</p>
+                            <p> The video animation they created for our business was beyond expectations. It clearly communicated our message and helped us attract more customers. Great creativity and professionalism! </p>
                             <div class="testi-card-footer">
                                 <div class="testi-card-author">
                                     <div>
@@ -83,7 +83,7 @@
 
                     <div class="col-md-6 col-sm-12 col-lg-6 col-12">
                         <div class="testi-card">
-                            <p>�Our online engagement and leads have significantly increased after working with them. Their strategies are result-driven and truly effective. We are very satisfied with the results.�</p>
+                            <p> Our online engagement and leads have significantly increased after working with them. Their strategies are result-driven and truly effective. We are very satisfied with the results. </p>
                             <div class="testi-card-footer">
                                 <div class="testi-card-author">
                                     <div>
@@ -100,7 +100,7 @@
 
                     <div class="col-md-6 col-sm-12 col-lg-6 col-12">
                         <div class="testi-card">
-                            <p>�They built our online store with great attention to detail. The website is fast, secure, and easy to manage. Sales have improved noticeably since launch.�</p>
+                            <p> They built our online store with great attention to detail. The website is fast, secure, and easy to manage. Sales have improved noticeably since launch. </p>
                             <div class="testi-card-footer">
                                 <div class="testi-card-author">
                                     <div>
@@ -117,7 +117,7 @@
 
                     <div class="col-md-6 col-sm-12 col-lg-6 col-12">
                         <div class="testi-card">
-                            <p>�Very professional and responsive team. They understood our requirements perfectly and delivered on time. Their ongoing support is also excellent.�</p>
+                            <p> Very professional and responsive team. They understood our requirements perfectly and delivered on time. Their ongoing support is also excellent. </p>
                             <div class="testi-card-footer">
                                 <div class="testi-card-author">
                                     <div>
