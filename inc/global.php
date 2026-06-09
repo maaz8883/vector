@@ -109,6 +109,11 @@ setcookie('first_touch', json_encode($_SESSION['first_touch']), time()+2592000, 
 setcookie('last_touch', json_encode($_SESSION['last_touch']), time()+2592000, "/");
 $base_url  = (isset($_SERVER['HTTPS']) ? "https://" : "http://").$_SERVER['HTTP_HOST'];
 $base_url .= preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'])).'/';
+
+$host = strtolower($_SERVER['HTTP_HOST'] ?? '');
+$is_local = in_array($host, ['localhost', '127.0.0.1'], true)
+    || preg_match('/\.(test|local)$/', $host);
+$assets_url = $is_local ? $base_url . 'assets/' : 'assets/';
 $current_url  = (isset($_SERVER['HTTPS']) ? "https://" : "http://").$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 $post_url = htmlspecialchars((isset($_SERVER['HTTPS']) ? "https://" : "http://").$_SERVER['HTTP_HOST'].str_replace('index.php/','',$_SERVER["PHP_SELF"]));
 $path = str_replace($base_url, '',$current_url);
