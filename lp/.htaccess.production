@@ -1,12 +1,9 @@
+# Deploy par is file ko lp/.htaccess ke naam se upload karein
 RewriteEngine On
 
 DirectoryIndex index.php
 
-# Funnel pages — main directory ki files (localhost: /vector/ | production: /)
-RewriteCond %{HTTP_HOST} ^(localhost|127\.0\.0\.1)$ [NC]
-RewriteRule ^(logo-style|logo-details|additional-details|brief-form|payment-step|pay|thank-you|thanks|pay-thank-you)/?$ /vector/$1.php [L,QSA]
-
-RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)$ [NC]
+# Funnel pages — parent directory (logovectordesign.com/lp/ -> /logo-style.php)
 RewriteRule ^(logo-style|logo-details|additional-details|brief-form|payment-step|pay|thank-you|thanks|pay-thank-you)/?$ /$1.php [L,QSA]
 
 # Clean URLs — sirf lp ke apne pages (e.g. index)
