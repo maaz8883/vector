@@ -1,0 +1,9 @@
+RewriteEngine On
+RewriteBase /vector_lp/
+
+DirectoryIndex index.php
+
+# Clean URLs — map /page to /page.php
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L,QSA]

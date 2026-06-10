@@ -504,10 +504,12 @@ $('.pricing-slider').owlCarousel({
             var badge  = wrap.querySelector('.pricing-plan-badge');
             var amount = wrap.querySelector('.pricing-amount');
             var dollar = wrap.querySelector('.pricing-dollar');
-            var oldPrice = wrap.querySelector('.pricing-old');
             if (pkgName)  pkgName.textContent  = badge  ? badge.textContent.trim()  : 'Project';
             if (pkgPrice) pkgPrice.textContent = (dollar ? dollar.textContent.trim() : '$') +
                                                  (amount ? amount.textContent.trim() : '');
+            if (window.LOGO_FUNNEL && typeof window.selectPackage === 'function' && badge && amount) {
+                window.selectPackage(badge.textContent.trim(), amount.textContent.trim());
+            }
         }
         overlay.classList.add('active');
         document.body.style.overflow = 'hidden';

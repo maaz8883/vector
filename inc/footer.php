@@ -370,6 +370,7 @@
     });
     observer.observe();
 </script>
+<script>window.SITE_BASE = <?php echo json_encode($base_url); ?>;</script>
 <script src="assets/js/api.js"></script>
 <script src="assets/js/custom.js"></script>
 

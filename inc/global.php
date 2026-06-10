@@ -136,7 +136,19 @@ if (strpos($page, '.php') !== false) {
 $page = (empty($page) || $page == 'index') ? 'home' : $page;
 $page .= '.php';
 $exampted_pages = array('thankyou.php','404.php','enroll-now.php', 'logo.php', 'website.php', 'brief/seo.php', 'smm.php', 'create_link.php', 'link_details.php', 'paynow.php', 'charge.php', 'fail.php', 'confirm_payment.php'); 
-$exampt_allfiles = array('create_payment.php' ,'confirm_payment.php'); 
+$exampt_allfiles = array(
+    'create_payment.php',
+    'confirm_payment.php',
+    'logo-style.php',
+    'logo-details.php',
+    'additional-details.php',
+    'payment-step.php',
+    'thank-you.php',
+    'thanks.php',
+    'brief-form.php',
+    'pay.php',
+    'pay-thank-you.php',
+);
 $no = "(323) 205-7496";
 $no1 = "(323) 205-7496";
 $add = "2648 international Blvd Ste 301 1022 Oakland CA, 94601";

@@ -576,3 +576,4 @@
       </div>
    </div>
 </section>
+<script>window.LOGO_FUNNEL = true; window.SITE_BASE = <?php echo json_encode($base_url); ?>;</script>
