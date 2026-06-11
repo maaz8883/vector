@@ -4,29 +4,64 @@
  * Works from main site (via index.php + global.php) or LP folder (via lp/.htaccess rewrite).
  */
 
+if (!function_exists('funnel_request_scheme')) {
+    function funnel_request_scheme(): string
+    {
+        if ((!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off')
+            || (isset($_SERVER['HTTP_X_FORWARDED_PROTO']) && strtolower($_SERVER['HTTP_X_FORWARDED_PROTO']) === 'https')
+            || (isset($_SERVER['REQUEST_SCHEME']) && strtolower($_SERVER['REQUEST_SCHEME']) === 'https')) {
+            return 'https://';
+        }
+
+        return 'http://';
+    }
+}
+
+if (!function_exists('funnel_request_host')) {
+    function funnel_request_host(): string
+    {
+        $candidates = [];
+
+        if (!empty($_SERVER['HTTP_X_FORWARDED_HOST'])) {
+            $candidates[] = trim(explode(',', $_SERVER['HTTP_X_FORWARDED_HOST'])[0]);
+        }
+        if (!empty($_SERVER['HTTP_HOST'])) {
+            $candidates[] = $_SERVER['HTTP_HOST'];
+        }
+        if (!empty($_SERVER['SERVER_NAME'])) {
+            $candidates[] = $_SERVER['SERVER_NAME'];
+        }
+
+        foreach ($candidates as $candidate) {
+            $normalized = strtolower(preg_replace('/:\d+$/', '', trim($candidate)));
+            if ($normalized !== '' && !in_array($normalized, ['localhost', '127.0.0.1'], true)) {
+                return trim($candidate);
+            }
+        }
+
+        return $_SERVER['HTTP_HOST'] ?? $_SERVER['SERVER_NAME'] ?? 'localhost';
+    }
+}
+
 $requestUri = str_replace('\\', '/', $_SERVER['REQUEST_URI'] ?? '');
 $scriptName = str_replace('\\', '/', $_SERVER['SCRIPT_NAME'] ?? '');
+$uriPath = parse_url($requestUri, PHP_URL_PATH) ?: '';
 
-$is_lp_funnel = preg_match('#/(?:lp|vector_lp)/#i', $requestUri)
+$is_lp_funnel = preg_match('#/(?:lp|vector_lp)(?:/|$)#i', $uriPath)
     || preg_match('#/(?:lp|vector_lp)/#i', $scriptName);
 
-$scheme = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https://' : 'http://';
-$host = $_SERVER['HTTP_HOST'] ?? 'localhost';
+$scheme = funnel_request_scheme();
+$host = funnel_request_host();
 
 if (!isset($base_url)) {
-    if ($is_lp_funnel) {
-        $uriPath = parse_url($requestUri, PHP_URL_PATH) ?: '';
-        if (preg_match('#^(.*?/(?:lp|vector_lp)/)#i', $uriPath, $m)) {
-            $base_url = $scheme . $host . $m[1];
-        } else {
-            $base_url = $scheme . $host . preg_replace('@/+$@', '', dirname($scriptName)) . '/';
-        }
+    if ($is_lp_funnel && preg_match('#^(.*?/(?:lp|vector_lp)/)#i', $uriPath, $m)) {
+        $base_url = $scheme . $host . $m[1];
     } else {
         $base_url = $scheme . $host . preg_replace('@/+$@', '', dirname($scriptName)) . '/';
     }
 }
 
-$hostLower = strtolower($host);
+$hostLower = strtolower(preg_replace('/:\d+$/', '', $host));
 $is_local = in_array($hostLower, ['localhost', '127.0.0.1'], true)
     || preg_match('/\.(test|local)$/', $hostLower);
 
@@ -35,14 +70,9 @@ if (!isset($assets_url)) {
 }
 
 if ($is_lp_funnel) {
-    if ($is_local) {
-        $scriptDir = preg_replace('@/+$@', '', dirname($scriptName));
-        if (preg_match('#/(?:lp|vector_lp)$#i', $scriptDir)) {
-            $parentPath = dirname($scriptDir);
-        } else {
-            $parentPath = $scriptDir;
-        }
-        $parent_assets_url = $scheme . $host . $parentPath . '/assets/';
+    if ($is_local && preg_match('#^(.*?/(?:lp|vector_lp)/)#i', $uriPath, $m)) {
+        $siteRoot = preg_replace('#/(?:lp|vector_lp)/$#i', '', $m[1]);
+        $parent_assets_url = $scheme . $host . ($siteRoot === '' ? '' : $siteRoot) . '/assets/';
     } else {
         $parent_assets_url = '../assets/';
     }

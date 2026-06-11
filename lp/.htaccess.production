@@ -3,7 +3,11 @@ RewriteEngine On
 
 DirectoryIndex index.php
 
-# Funnel pages — parent directory (logovectordesign.com/lp/ -> /logo-style.php)
+# .php URL → clean URL (/lp/pay.php?id=x → /lp/pay?id=x)
+RewriteCond %{THE_REQUEST} \s/+lp/(logo-style|logo-details|additional-details|brief-form|payment-step|pay|thank-you|thanks|pay-thank-you)\.php [NC]
+RewriteRule ^(logo-style|logo-details|additional-details|brief-form|payment-step|pay|thank-you|thanks|pay-thank-you)\.php$ /lp/$1? [R=301,L,QSA]
+
+# Funnel pages — clean URL → parent directory (/lp/pay?id=x → /pay.php?id=x)
 RewriteRule ^(logo-style|logo-details|additional-details|brief-form|payment-step|pay|thank-you|thanks|pay-thank-you)/?$ /$1.php [L,QSA]
 
 # Clean URLs — sirf lp ke apne pages (e.g. index)

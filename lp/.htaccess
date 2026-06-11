@@ -2,7 +2,16 @@ RewriteEngine On
 
 DirectoryIndex index.php
 
-# Funnel pages — main directory ki files (localhost: /vector/ | production: /)
+# .php URL → clean URL
+RewriteCond %{HTTP_HOST} ^(localhost|127\.0\.0\.1)$ [NC]
+RewriteCond %{THE_REQUEST} \s/+vector/lp/(logo-style|logo-details|additional-details|brief-form|payment-step|pay|thank-you|thanks|pay-thank-you)\.php [NC]
+RewriteRule ^(logo-style|logo-details|additional-details|brief-form|payment-step|pay|thank-you|thanks|pay-thank-you)\.php$ /vector/lp/$1? [R=301,L,QSA]
+
+RewriteCond %{HTTP_HOST} !^(localhost|127\.0\.0\.1)$ [NC]
+RewriteCond %{THE_REQUEST} \s/+lp/(logo-style|logo-details|additional-details|brief-form|payment-step|pay|thank-you|thanks|pay-thank-you)\.php [NC]
+RewriteRule ^(logo-style|logo-details|additional-details|brief-form|payment-step|pay|thank-you|thanks|pay-thank-you)\.php$ /lp/$1? [R=301,L,QSA]
+
+# Funnel pages — clean URL → parent directory
 RewriteCond %{HTTP_HOST} ^(localhost|127\.0\.0\.1)$ [NC]
 RewriteRule ^(logo-style|logo-details|additional-details|brief-form|payment-step|pay|thank-you|thanks|pay-thank-you)/?$ /vector/$1.php [L,QSA]
 

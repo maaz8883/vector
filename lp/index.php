@@ -2229,9 +2229,8 @@ body { background: #ffffff; overflow-x: hidden; }
 
 <!-- ==================== SCRIPTS ==================== -->
 <?php
-$lp_base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https://' : 'http://')
-    . ($_SERVER['HTTP_HOST'] ?? 'localhost');
-$lp_base_url .= preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'] ?? '')) . '/';
+require_once dirname(__DIR__) . '/inc/funnel-init.php';
+$lp_base_url = $base_url;
 ?>
 <script>window.LOGO_FUNNEL = true; window.SITE_BASE = <?php echo json_encode($lp_base_url); ?>;</script>
 <script src="../assets/js/api.js?v=<?php echo time(); ?>"></script>
