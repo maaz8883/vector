@@ -1,4 +1,4 @@
-﻿<?php
+<?php
 require 'inc/global.php';
 require 'inc/form.php';
 

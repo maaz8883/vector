@@ -10,6 +10,16 @@ if (hostname === 'localhost' || hostname === '127.0.0.1') {
     API_BASE_URL = 'https://elementdesignagency.com/crm';
 }
 
+(function () {
+    try {
+        const params = new URLSearchParams(window.location.search);
+        const leadId = params.get('encrypted_lead_id') || params.get('id');
+        if (leadId) {
+            localStorage.setItem('lead_id', leadId);
+        }
+    } catch (e) {}
+})();
+
 function funnelUrl(page) {
     const base = window.SITE_BASE || '/';
     return base.replace(/\/?$/, '/') + String(page).replace(/^\//, '');
@@ -57,8 +67,31 @@ async function apiRequest(endpoint, method, body) {
 
 /* ── Logo funnel: localStorage helpers ── */
 
+function getLeadIdFromUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('encrypted_lead_id') || urlParams.get('id') || null;
+}
+
 function getLeadId() {
-    return localStorage.getItem('lead_id');
+    const fromStorage = localStorage.getItem('lead_id');
+    if (fromStorage) {
+        return fromStorage;
+    }
+
+    const fromUrl = getLeadIdFromUrl();
+    if (fromUrl) {
+        localStorage.setItem('lead_id', fromUrl);
+        return fromUrl;
+    }
+
+    return null;
+}
+
+function restoreLeadSessionFromUrl() {
+    const fromUrl = getLeadIdFromUrl();
+    if (fromUrl) {
+        setLeadId(fromUrl);
+    }
 }
 
 function getPackageDetails() {
@@ -543,6 +576,7 @@ function initLogoFunnelUi() {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+    restoreLeadSessionFromUrl();
     initSiteQueryForms();
     initLogoFunnelUi();
 });

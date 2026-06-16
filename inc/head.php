@@ -108,7 +108,7 @@ else {
     $script = "";
 }
 ?>
-<title><?php echo $title?></title>
+ <title><?php echo $title?></title>
 		<meta name="description" content="<?php echo $discription?>">
 		<!-- <meta name="robots" content="<?php echo $robots?>" /> -->
 		<?php echo $script?>
@@ -141,7 +141,25 @@ else {
     <link rel="stylesheet" rel="preload" as="style" type="text/css" href="<?php echo $assets_url; ?>css/responsive.css" media="all"/>
     <link rel="preload" fetchpriority="high" as="image" href="<?php echo $assets_url; ?>images/logo.webp" type="image/webp">
     <link rel="preload" fetchpriority="high" as="image" href="<?php echo $assets_url; ?>images/main-banner-hands.webp" type="image/webp">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+ 
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
+ 
+ 
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M68WTFMG');</script>
+<!-- End Google Tag Manager -->
+ 
 </head>
 
 <body>
+    
+
+    
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M68WTFMG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->

@@ -1,4 +1,4 @@
-﻿
+
 <!-- SERVICES BANNER -->
 <section class="about-page-banner">
    <div class="container">
@@ -323,190 +323,204 @@
             <h2>Our Affordable <span>Pricing</span></h2>
          </div>
          <div class="row pricing-cards">
+       <!-- Basic -->
             <div class="col-md-4 col-sm-12 col-12">
-               <div class="pricing-card-wrap">
-                  <span class="pricing-plan-badge">Basic</span>
-                  <div class="pricing-card">
-                     <div class="pricing-card-row">
-                        <div class="pricing-price">
-                           <span class="pricing-dollar">$</span>
-                           <span class="pricing-amount">18</span>
-                           <span class="pricing-old">$95</span>
+                <div class="pricing-card-wrap">
+                    <span class="pricing-plan-badge">Basic</span>
+                    <div class="pricing-card">
+                        <div class="pricing-card-row">
+                            <div class="pricing-price">
+                                <span class="pricing-dollar">$</span>
+                                <span class="pricing-amount">18</span>
+                                <span class="pricing-old">$95</span>
+                            </div>
+                            <img src="../assets/images/pricing-cursor.webp" class="pricing-cursor" alt="cursor">
                         </div>
-                        <img data-src="assets/images/pricing-cursor.webp" class="pricing-cursor lozad" alt="cursor">
-                     </div>
-                     <p class="pricing-desc">Perfect for startups needing a simple, professional logo.</p>
-                     <ul class="pricing-features">
-                        <li><i class="fas fa-check-circle"></i> 4 Logo Concepts</li>
-                        <li><i class="fas fa-check-circle"></i> 5 Revisions</li>
-                        <li><i class="fas fa-check-circle"></i> 1 Dedicated Designer</li>
-                        <li><i class="fas fa-check-circle"></i> Free Color Options</li>
-                        <li><i class="fas fa-check-circle"></i> Free Grayscale Format</li>
-                        <li><i class="fas fa-check-circle"></i> 24 48 Hours TAT</li>
-                        <li><i class="fas fa-check-circle"></i> File Formats (JPG)</li>
-                        <li><i class="fas fa-check-circle"></i> 100% Ownership Rights</li>
-                        <li><i class="fas fa-check-circle"></i> 100% Money-back Guarantee</li>
-                        <li><i class="fas fa-check-circle"></i> 24/7 Expert Support</li>
-                     </ul>
-                     <button class="pricing-btn">Start Your Project</button>
-                  </div>
-               </div>
+                        <p class="pricing-desc">Perfect for startups needing a simple, professional logo.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check-circle"></i> 4 Logo Concepts</li>
+                            <li><i class="fas fa-check-circle"></i> 5 Revisions</li>
+                            <li><i class="fas fa-check-circle"></i> 1 Dedicated Designer</li>
+                            <li><i class="fas fa-check-circle"></i> Free Color Options</li>
+                            <li><i class="fas fa-check-circle"></i> Free Grayscale Format</li>
+                            <li><i class="fas fa-check-circle"></i> 24-48 Hours TAT</li>
+                            <li><i class="fas fa-check-circle"></i> File Formats (JPG)</li>
+                            <li><i class="fas fa-check-circle"></i> 100% Ownership Rights</li>
+                            <li><i class="fas fa-check-circle"></i> 24/7 Expert Support</li>
+                        </ul>
+                        <a href="#" class="pricing-btn js-open-pkg" data-pkg-name="Basic" data-pkg-price="$18">Start Your Project</a>
+                    </div>
+                </div>
             </div>
+
+            <!-- Standard -->
             <div class="col-md-4 col-sm-12 col-12">
-               <div class="pricing-card-wrap">
-                  <span class="pricing-plan-badge">Standard</span>
-                  <div class="pricing-card">
-                     <div class="pricing-card-row">
-                        <div class="pricing-price">
-                           <span class="pricing-dollar">$</span>
-                           <span class="pricing-amount">75</span>
-                           <span class="pricing-old">$250</span>
+                <div class="pricing-card-wrap">
+                    <span class="pricing-plan-badge">Standard</span>
+                    <div class="pricing-card">
+                        <div class="pricing-card-row">
+                            <div class="pricing-price">
+                                <span class="pricing-dollar">$</span>
+                                <span class="pricing-amount">75</span>
+                                <span class="pricing-old">$250</span>
+                            </div>
+                            <img src="../assets/images/pricing-cursor.webp" class="pricing-cursor" alt="cursor">
                         </div>
-                        <img data-src="assets/images/pricing-cursor.webp" class="pricing-cursor lozad" alt="cursor">
-                     </div>
-                     <p class="pricing-desc">Ideal for small businesses building a consistent brand identity.</p>
-                     <ul class="pricing-features">
-                        <li><i class="fas fa-check-circle"></i> 5 Logo Design Concepts</li>
-                        <li><i class="fas fa-check-circle"></i> 8 Revisions</li>
-                        <li><i class="fas fa-check-circle"></i> 2 Dedicated Designers</li>
-                        <li><i class="fas fa-check-circle"></i> Free Stationery Design (Business Card)</li>
-                        <li><i class="fas fa-check-circle"></i> Free Color Options</li>
-                        <li><i class="fas fa-check-circle"></i> Free Grayscale Format</li>
-                        <li><i class="fas fa-check-circle"></i> Free Icon</li>
-                        <li><i class="fas fa-check-circle"></i> 24 48 Hours TAT</li>
-                        <li><i class="fas fa-check-circle"></i> File Formats: PNG, JPG</li>
-                        <li><i class="fas fa-check-circle"></i> 100% Ownership Rights</li>
-                        <li><i class="fas fa-check-circle"></i> 100% Money-Back Guarantee</li>
-                        <li><i class="fas fa-check-circle"></i> 24/7 Expert Support</li>
-                     </ul>
-                     <button class="pricing-btn">Start Your Project</button>
-                  </div>
-               </div>
+                        <p class="pricing-desc">Ideal for small businesses building a consistent brand identity.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check-circle"></i> 5 Logo Design Concepts</li>
+                            <li><i class="fas fa-check-circle"></i> 8 Revisions</li>
+                            <li><i class="fas fa-check-circle"></i> 2 Dedicated Designers</li>
+                            <li><i class="fas fa-check-circle"></i> Free Stationery Design (Business Card)</li>
+                            <li><i class="fas fa-check-circle"></i> Free Color Options</li>
+                            <li><i class="fas fa-check-circle"></i> Free Grayscale Format</li>
+                            <li><i class="fas fa-check-circle"></i> Free Icon</li>
+                            <li><i class="fas fa-check-circle"></i> 24-48 Hours TAT</li>
+                            <li><i class="fas fa-check-circle"></i> File Formats: PNG, JPG</li>
+                            <li><i class="fas fa-check-circle"></i> 100% Ownership Rights</li>
+                            <li><i class="fas fa-check-circle"></i> 24/7 Expert Support</li>
+                        </ul>
+                        <a href="#" class="pricing-btn js-open-pkg" data-pkg-name="Standard" data-pkg-price="$75">Start Your Project</a>
+                    </div>
+                </div>
             </div>
+
+            <!-- Advance -->
             <div class="col-md-4 col-sm-12 col-12">
-               <div class="pricing-card-wrap">
-                  <span class="pricing-plan-badge">Advance</span>
-                  <div class="pricing-card">
-                     <div class="pricing-card-row">
-                        <div class="pricing-price">
-                           <span class="pricing-dollar">$</span>
-                           <span class="pricing-amount">125</span>
-                           <span class="pricing-old">$416</span>
+                <div class="pricing-card-wrap featured">
+                    <span class="pricing-plan-badge">Advance</span>
+                    <div class="pricing-card">
+                        <div class="pricing-card-row">
+                            <div class="pricing-price">
+                                <span class="pricing-dollar">$</span>
+                                <span class="pricing-amount">125</span>
+                                <span class="pricing-old">$416</span>
+                            </div>
+                            <img src="../assets/images/pricing-cursor.webp" class="pricing-cursor" alt="cursor">
                         </div>
-                        <img data-src="assets/images/pricing-cursor.webp" class="pricing-cursor lozad" alt="cursor">
-                     </div>
-                     <p class="pricing-desc">Designed for growing brands that need a standout, versatile logo.</p>
-                     <ul class="pricing-features">
-                        <li><i class="fas fa-check-circle"></i> 6 Logo Design Concepts</li>
-                        <li><i class="fas fa-check-circle"></i> 10 Revisions</li>
-                        <li><i class="fas fa-check-circle"></i> 3 Dedicated Designers</li>
-                        <li><i class="fas fa-check-circle"></i> Free Stationery (Business Card, Letterhead)</li>
-                        <li><i class="fas fa-check-circle"></i> Free Icon</li>
-                        <li><i class="fas fa-check-circle"></i> Free Email Signature</li>
-                        <li><i class="fas fa-check-circle"></i> Social Media Designs (Any 3 Platforms)</li>
-                        <li><i class="fas fa-check-circle"></i> Free Color Options &amp; Grayscale</li>
-                        <li><i class="fas fa-check-circle"></i> 24 48 Hours TAT</li>
-                        <li><i class="fas fa-check-circle"></i> File Formats: AI, PSD, EPS, PNG, JPG, PDF</li>
-                        <li><i class="fas fa-check-circle"></i> 100% Ownership Rights</li>
-                        <li><i class="fas fa-check-circle"></i> 100% Money-Back Guarantee</li>
-                        <li><i class="fas fa-check-circle"></i> 24/7 Expert Support</li>
-                     </ul>
-                     <button class="pricing-btn">Start Your Project</button>
-                  </div>
-               </div>
+                        <p class="pricing-desc">Designed for growing brands that need a standout, versatile logo.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check-circle"></i> 6 Logo Design Concepts</li>
+                            <li><i class="fas fa-check-circle"></i> 10 Revisions</li>
+                            <li><i class="fas fa-check-circle"></i> 3 Dedicated Designers</li>
+                            <li><i class="fas fa-check-circle"></i> Free Stationery (Business Card, Letterhead)</li>
+                            <li><i class="fas fa-check-circle"></i> Free Icon</li>
+                            <li><i class="fas fa-check-circle"></i> Free Email Signature</li>
+                            <li><i class="fas fa-check-circle"></i> Free Color Options &amp; Grayscale</li>
+                            <li><i class="fas fa-check-circle"></i> 24-48 Hours TAT</li>
+                            <li><i class="fas fa-check-circle"></i> File Formats: AI, PSD, EPS, PNG, JPG, PDF</li>
+                            <li><i class="fas fa-check-circle"></i> 100% Ownership Rights</li>
+                            <li><i class="fas fa-check-circle"></i> 24/7 Expert Support</li>
+                        </ul>
+                        <a href="#" class="pricing-btn js-open-pkg" data-pkg-name="Advance" data-pkg-price="$125">Start Your Project</a>
+                    </div>
+                </div>
             </div>
+
+            <!-- Premium -->
             <div class="col-md-4 col-sm-12 col-12">
-               <div class="pricing-card-wrap">
-                  <span class="pricing-plan-badge">Premium</span>
-                  <div class="pricing-card">
-                     <div class="pricing-card-row">
-                        <div class="pricing-price">
-                           <span class="pricing-dollar">$</span>
-                           <span class="pricing-amount">175</span>
-                           <span class="pricing-old">$583</span>
+                <div class="pricing-card-wrap">
+                    <span class="pricing-plan-badge">Premium</span>
+                    <div class="pricing-card">
+                        <div class="pricing-card-row">
+                            <div class="pricing-price">
+                                <span class="pricing-dollar">$</span>
+                                <span class="pricing-amount">175</span>
+                                <span class="pricing-old">$583</span>
+                            </div>
+                            <img src="../assets/images/pricing-cursor.webp" class="pricing-cursor" alt="cursor">
                         </div>
-                        <img data-src="assets/images/pricing-cursor.webp" class="pricing-cursor lozad" alt="cursor">
-                     </div>
-                     <p class="pricing-desc">For businesses that want a high-end, professional brand presence.</p>
-                     <ul class="pricing-features">
-                        <li><i class="fas fa-check-circle"></i> 8 Custom Logo Design Concepts</li>
-                        <li><i class="fas fa-check-circle"></i> 6 Award-Winning Designers</li>
-                        <li><i class="fas fa-check-circle"></i> Unlimited Revisions</li>
-                        <li><i class="fas fa-check-circle"></i> Social Media Banner</li>
-                        <li><i class="fas fa-check-circle"></i> Free Icon Design</li>
-                        <li><i class="fas fa-check-circle"></i> Free Custom Stationery (Letterhead, Business Card, Envelope, Invoice)</li>
-                        <li><i class="fas fa-check-circle"></i> Double-Side Flyer (OR) Bi-Fold Brochure</li>
-                        <li><i class="fas fa-check-circle"></i> Free MS Electronic Letterhead</li>
-                        <li><i class="fas fa-check-circle"></i> Email Signature Design</li>
-                        <li><i class="fas fa-check-circle"></i> $50 Off on Website Order</li>
-                        <li><i class="fas fa-check-circle"></i> 48 72 Hours TAT</li>
-                        <li><i class="fas fa-check-circle"></i> File Formats: AI, PSD, EPS, PNG, JPG, PDF</li>
-                        <li><i class="fas fa-check-circle"></i> 100% Satisfaction &amp; Unique Design Guarantee</li>
-                        <li><i class="fas fa-check-circle"></i> 100% Money-Back Guarantee</li>
-                        <li><i class="fas fa-check-circle"></i> 24/7 Expert Support</li>
-                     </ul>
-                     <button class="pricing-btn">Start Your Project</button>
-                  </div>
-               </div>
+                        <p class="pricing-desc">For businesses that want a high-end, professional brand presence.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check-circle"></i> 8 Custom Logo Design Concepts</li>
+                            <li><i class="fas fa-check-circle"></i> 6 Award-Winning Designers</li>
+                            <li><i class="fas fa-check-circle"></i> Unlimited Revisions</li>
+                            <li><i class="fas fa-check-circle"></i> Free Icon Design</li>
+                            <li><i class="fas fa-check-circle"></i> Free Custom Stationery (Letterhead, Business Card, Envelope, Invoice)</li>
+                            <li><i class="fas fa-check-circle"></i> Social Media Designs (Any 3 Platforms)</li>
+                            <li><i class="fas fa-check-circle"></i> Email Signature Design</li>
+                            <li><i class="fas fa-check-circle"></i> $50 Off on Website Order</li>
+                            <li><i class="fas fa-check-circle"></i> 48-72 Hours TAT</li>
+                            <li><i class="fas fa-check-circle"></i> File Formats: AI, PSD, EPS, PNG, JPG, PDF</li>
+                            <li><i class="fas fa-check-circle"></i> 100% Satisfaction &amp; Unique Design Guarantee</li>
+                            <li><i class="fas fa-check-circle"></i> 24/7 Expert Support</li>
+                        </ul>
+                        <a href="#" class="pricing-btn js-open-pkg" data-pkg-name="Premium" data-pkg-price="$175">Start Your Project</a>
+                    </div>
+                </div>
             </div>
+
+            <!-- Enterprise -->
             <div class="col-md-4 col-sm-12 col-12">
-               <div class="pricing-card-wrap">
-                  <span class="pricing-plan-badge">Enterprise</span>
-                  <div class="pricing-card">
-                     <div class="pricing-card-row">
-                        <div class="pricing-price">
-                           <span class="pricing-dollar">$</span>
-                           <span class="pricing-amount">249</span>
-                           <span class="pricing-old">$830</span>
+                <div class="pricing-card-wrap">
+                    <span class="pricing-plan-badge">Enterprise</span>
+                    <div class="pricing-card">
+                        <div class="pricing-card-row">
+                            <div class="pricing-price">
+                                <span class="pricing-dollar">$</span>
+                                <span class="pricing-amount">249</span>
+                                <span class="pricing-old">$830</span>
+                            </div>
+                            <img src="../assets/images/pricing-cursor.webp" class="pricing-cursor" alt="cursor">
                         </div>
-                        <img data-src="assets/images/pricing-cursor.webp" class="pricing-cursor lozad" alt="cursor">
-                     </div>
-                     <p class="pricing-desc">Complete logo solution for established and scaling businesses.</p>
-                     <ul class="pricing-features">
-                        <li><i class="fas fa-check-circle"></i> Unlimited Logo Concepts</li>
-                        <li><i class="fas fa-check-circle"></i> 6 Award-Winning Designers</li>
-                        <li><i class="fas fa-check-circle"></i> Unlimited Revisions</li>
-                        <li><i class="fas fa-check-circle"></i> Social Media Banner</li>
-                        <li><i class="fas fa-check-circle"></i> Free Icon Design</li>
-                        <li><i class="fas fa-check-circle"></i> Free Custom Stationery (Letterhead, Business Card, Envelope, Invoice)</li>
-                        <li><i class="fas fa-check-circle"></i> Bi-Fold or Tri-Fold Brochure</li>
-                        <li><i class="fas fa-check-circle"></i> Free MS Electronic Letterhead</li>
-                        <li><i class="fas fa-check-circle"></i> Email Signature Design</li>
-                        <li><i class="fas fa-check-circle"></i> $50 Off on Website Order</li>
-                        <li><i class="fas fa-check-circle"></i> 48 72 Hours TAT</li>
-                        <li><i class="fas fa-check-circle"></i> File Formats: AI, PSD, EPS, PNG, JPG, PDF</li>
-                        <li><i class="fas fa-check-circle"></i> 100% Satisfaction &amp; Unique Design Guarantee</li>
-                        <li><i class="fas fa-check-circle"></i> 100% Money-Back Guarantee</li>
-                        <li><i class="fas fa-check-circle"></i> 24/7 Expert Support</li>
-                     </ul>
-                     <button class="pricing-btn">Start Your Project</button>
-                  </div>
-               </div>
+                        <p class="pricing-desc">Complete logo solution for established and scaling businesses.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check-circle"></i> Unlimited Logo Concepts</li>
+                            <li><i class="fas fa-check-circle"></i> 6 Award-Winning Designers</li>
+                            <li><i class="fas fa-check-circle"></i> Unlimited Revisions</li>
+                            <li><i class="fas fa-check-circle"></i> Free Icon Design</li>
+                            <li><i class="fas fa-check-circle"></i> Free Custom Stationery (Letterhead, Business Card, Envelope, Invoice)</li>
+                            <li><i class="fas fa-check-circle"></i> Social Media Designs (Any 3 Platforms)</li>
+                            <li><i class="fas fa-check-circle"></i> Bi-Fold or Tri-Fold Brochure</li>
+                            <li><i class="fas fa-check-circle"></i> Free MS Electronic Letterhead</li>
+                            <li><i class="fas fa-check-circle"></i> Email Signature Design</li>
+                            <li><i class="fas fa-check-circle"></i> $50 Off on Website Order</li>
+                            <li><i class="fas fa-check-circle"></i> 48-72 Hours TAT</li>
+                            <li><i class="fas fa-check-circle"></i> File Formats: AI, PSD, EPS, PNG, JPG, PDF</li>
+                            <li><i class="fas fa-check-circle"></i> 100% Satisfaction &amp; Unique Design Guarantee</li>
+                            <li><i class="fas fa-check-circle"></i> 100% Money-Back Guarantee</li>
+                            <li><i class="fas fa-check-circle"></i> 24/7 Expert Support</li>
+                        </ul>
+                        <a href="#" class="pricing-btn js-open-pkg" data-pkg-name="Enterprise" data-pkg-price="$249">Start Your Project</a>
+                    </div>
+                </div>
             </div>
+
+            <!-- Corporate -->
             <div class="col-md-4 col-sm-12 col-12">
-               <div class="pricing-card-wrap">
-                  <span class="pricing-plan-badge">Corporate</span>
-                  <div class="pricing-card">
-                     <div class="pricing-card-row">
-                        <div class="pricing-price">
-                           <span class="pricing-dollar">$</span>
-                           <span class="pricing-amount">299</span>
-                           <span class="pricing-old">$996</span>
+                <div class="pricing-card-wrap">
+                    <span class="pricing-plan-badge">Corporate</span>
+                    <div class="pricing-card">
+                        <div class="pricing-card-row">
+                            <div class="pricing-price">
+                                <span class="pricing-dollar">$</span>
+                                <span class="pricing-amount">299</span>
+                                <span class="pricing-old">$996</span>
+                            </div>
+                            <img src="../assets/images/pricing-cursor.webp" class="pricing-cursor" alt="cursor">
                         </div>
-                        <img data-src="assets/images/pricing-cursor.webp" class="pricing-cursor lozad" alt="cursor">
-                     </div>
-                     <p class="pricing-desc">Ultimate branding package for enterprises demanding perfection.</p>
-                     <ul class="pricing-features">
-                        <li><i class="fas fa-check-circle"></i> Unlimited Custom Logo Concepts</li>
-                        <li><i class="fas fa-check-circle"></i> 8 Award-Winning Designers</li>
-                        <li><i class="fas fa-check-circle"></i> Unlimited Revisions</li>
-                        <li><i class="fas fa-check-circle"></i> 1 Website Prototype</li>
-                        <li><i class="fas fa-check-circle"></i> Free Icon Design</li>
-                        <li><i class="fas fa-check-circle"></i> Free Custom Stationery (Letterhead, Business Card, Envelope, Invoice)</li>
-                     </ul>
-                     <button class="pricing-btn">Start Your Project</button>
-                  </div>
-               </div>
+                        <p class="pricing-desc">Ultimate branding package for enterprises demanding perfection.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check-circle"></i> Unlimited Custom Logo Concepts</li>
+                            <li><i class="fas fa-check-circle"></i> 8 Award-Winning Designers</li>
+                            <li><i class="fas fa-check-circle"></i> Unlimited Revisions</li>
+                            <li><i class="fas fa-check-circle"></i> Free Icon Design</li>
+                            <li><i class="fas fa-check-circle"></i> Free Custom Stationery (Letterhead, Business Card, Envelope, Invoice)</li>
+                            <li><i class="fas fa-check-circle"></i> Social Media Designs (Any 3 Platforms)</li>
+                            <li><i class="fas fa-check-circle"></i> Bi-Fold or Tri-Fold Brochure</li>
+                            <li><i class="fas fa-check-circle"></i> Free MS Electronic Letterhead</li>
+                            <li><i class="fas fa-check-circle"></i> Email Signature Design</li>
+                            <li><i class="fas fa-check-circle"></i> $50 Off on Website Order</li>
+                            <li><i class="fas fa-check-circle"></i> 1 Website Prototype</li>
+                            <li><i class="fas fa-check-circle"></i> 48-72 Hours TAT</li>
+                            <li><i class="fas fa-check-circle"></i> File Formats: AI, PSD, EPS, PNG, JPG, PDF</li>
+                            <li><i class="fas fa-check-circle"></i> 100% Satisfaction &amp; Unique Design Guarantee</li>
+                            <li><i class="fas fa-check-circle"></i> 100% Money-Back Guarantee</li>
+                            <li><i class="fas fa-check-circle"></i> 24/7 Expert Support</li>
+                        </ul>
+                        <a href="#" class="pricing-btn js-open-pkg" data-pkg-name="Corporate" data-pkg-price="$299">Start Your Project</a>
+                    </div>
+                </div>
             </div>
          </div>
       </div>

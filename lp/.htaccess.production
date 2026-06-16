@@ -1,0 +1,12 @@
+RewriteEngine On
+RewriteBase /vector_lp/
+
+DirectoryIndex index.php
+
+# Funnel pages — serve from parent directory (no duplicate files in lp/)
+RewriteRule ^(logo-style|logo-details|additional-details|brief-form|payment-step|pay|thank-you|thanks|pay-thank-you)/?$ ../$1.php [L,QSA]
+
+# Clean URLs — map /page to /page.php (lp-local files only, e.g. index)
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.php -f
+RewriteRule ^([^/]+)/?$ $1.php [L,QSA]

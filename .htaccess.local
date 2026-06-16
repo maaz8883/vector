@@ -13,7 +13,8 @@ DirectoryIndex index.php
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.php [NC]
 RewriteRule ^ %1 [R=301,L]
 
-# Front controller — sab requests index.php par
+# Front controller — sab requests index.php par (lp/ apni .htaccess use karta hai)
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/vector/lp(/|$) [NC]
 RewriteRule ^(.+)$ index.php?page=$1 [L,QSA]

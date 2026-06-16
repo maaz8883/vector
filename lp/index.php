@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -491,7 +491,9 @@ body { background: #ffffff; overflow-x: hidden; }
     box-shadow: 0 4px 14px rgba(222,42,173,0.35);
 }
 .lp-port-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
-.lp-port-item { border-radius: 12px; overflow: hidden; cursor: pointer; position: relative; }
+.lp-port-item { border-radius: 12px; overflow: hidden; cursor: pointer; position: relative; display: none; }
+.lp-port-item[data-cat="estate"] { display: block; }
+
 .lp-port-item img {
     width: 100%; height: 200px; object-fit: cover; display: block;
     transition: transform 0.4s ease;
@@ -641,7 +643,8 @@ body { background: #ffffff; overflow-x: hidden; }
 .lp-bp-old {
     font-size: 18px;
     font-weight: 600;
-    color: rgba(26,16,64,0.35);
+    /*color: rgba(26,16,64,0.35);*/
+    color: rgb(255 255 255);
     text-decoration: line-through;
 }
 .lp-bp-off {
@@ -1211,8 +1214,11 @@ body { background: #ffffff; overflow-x: hidden; }
     .lp-ban-trust img { max-width: 100%; }
 }
 @media (max-width: 767px) {
-    .lp-hero { padding: 70px 0 50px; }
-    .lp-hero h1 { font-size: 28px; }
+        .lp-hero {
+        padding: 70px 0 50px;
+        text-align: center;
+    }
+    .lp-hero h1 {font-size: 43px;}
     .lp-hero-btns { flex-direction: column; }
     .btn-lp-primary, .btn-lp-secondary { width: 100%; text-align: center; }
     .lp-port-grid { grid-template-columns: repeat(2, 1fr); gap: 10px; }
@@ -1222,17 +1228,67 @@ body { background: #ffffff; overflow-x: hidden; }
     .lp-trust-badges { gap: 8px; }
     .lp-trust-badge { padding: 7px 10px; }
     .lp-trust-badge-divider { display: none; }
+    .lp-hero h1 span {
+    font-size: 38px;
+}
+#lpToast{
+    display:none;
+}
+.lp-hero ul.lp-bullets li {
+   
+    justify-content: center;
+}
+#lpSaleBar{display:none;}
+.lp-header {
+
+    padding: 14px 0 13px;
+}
 }
 @media (max-width: 575px) {
     .lp-port-grid { grid-template-columns: 1fr 1fr; }
-    .lp-portfolio-tabs { gap: 6px; overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; justify-content: flex-start; }
+    .lp-portfolio-tabs {gap: 6px;overflow-x: auto;padding-bottom: 4px;justify-content: center;}
     .lp-ptab { flex-shrink: 0; }
     .lp-trust-badges { flex-wrap: wrap; }
 }
 .pricing-btn{text-align:center;}
 </style>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-M68WTFMG');</script>
+<!-- End Google Tag Manager -->
+ 
+              <!-- Start of LiveChat (www.livechat.com) code -->
+<script>
+    window.__lc = window.__lc || {};
+    window.__lc.license = 19454392;
+    window.__lc.integration_name = "manual_onboarding";
+    window.__lc.product_name = "livechat";
+    ;(function(n,t,c){function i(n){return e._h?e._h.apply(null,n):e._q.push(n)}var e={_q:[],_h:null,_v:"2.0",on:function(){i(["on",c.call(arguments)])},once:function(){i(["once",c.call(arguments)])},off:function(){i(["off",c.call(arguments)])},get:function(){if(!e._h)throw new Error("[LiveChatWidget] You can't use getters before load.");return i(["get",c.call(arguments)])},call:function(){i(["call",c.call(arguments)])},init:function(){var n=t.createElement("script");n.async=!0,n.type="text/javascript",n.src="https://cdn.livechatinc.com/tracking.js",t.head.appendChild(n)}};!n.__lc.asyncInit&&e.init(),n.LiveChatWidget=n.LiveChatWidget||e}(window,document,[].slice))
+</script>
+
+<!-- End of LiveChat code -->
+ <script>
+document.addEventListener("DOMContentLoaded", function () {
+  document.querySelectorAll(".open-livechat").forEach(function (btn) {
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      if (window.LiveChatWidget) {
+        LiveChatWidget.call("maximize");
+      }
+    });
+  });
+});
+</script>
 </head>
+
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-M68WTFMG"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 
 
@@ -1257,8 +1313,8 @@ body { background: #ffffff; overflow-x: hidden; }
             </div>
             <div class="col-md-3 col-6">
                 <div class="lp-header-btns justify-content-end">
-                    <a href="tel:+12792251157" class="d-none d-lg-flex">
-                        <i class="fas fa-phone-alt" style="color:#de2aad;"></i> (279) 225-1157
+                    <a href="tel:+12798959172" class="d-none d-lg-flex">
+                        <i class="fas fa-phone-alt" style="color:#de2aad;"></i> (279) 895-9172
                     </a>
                     <a href="#" class="btn-lp-cta js-open-gs">Get Started</a>
                 </div>
@@ -1275,11 +1331,11 @@ body { background: #ffffff; overflow-x: hidden; }
                 <h1>Get Your <br><span> Custom Logo Design</span><br>For Only <span>$18!</span></h1>
                 <p class="lp-sub">Award-winning designers ready to create a unique, memorable logo that captures your brand's identity and helps you stand out in the market.</p>
                 <ul class="lp-bullets">
-                    <li>Unlimited Revisions Included</li>
-                    <li>100% Money-Back Guarantee</li>
-                    <li>Initial concepts within 48 hours</li>
-                    <li>Award-Winning Designers</li>
-                    <li>100% Satisfaction Guarantee</li>
+                    <li>Multiple Unique Logo Concepts</li>
+                    <li>Revisions Included</li>
+                    <li>Fast Turnaround Time</li>
+                    <li>100% Satisfaction Guarantee & Ownership</li>
+                    <li>Complete Brand Building with 24/7 Support</li>
                 </ul>
                 <div class="lp-hero-btns">
                     <a href="#" class="btn-lp-primary js-open-gs">GET STARTED NOW</a>
@@ -1368,8 +1424,7 @@ body { background: #ffffff; overflow-x: hidden; }
         </div>
 
         <div class="lp-portfolio-tabs" id="lpPortTabs">
-            <button class="lp-ptab active" data-cat="all">All</button>
-            <button class="lp-ptab" data-cat="estate">Real Estate</button>
+            <button class="lp-ptab active" data-cat="estate">Real Estate</button>
             <button class="lp-ptab" data-cat="food">Food</button>
             <button class="lp-ptab" data-cat="sports">Sports</button>
             <button class="lp-ptab" data-cat="technology">Technology</button>
@@ -1381,16 +1436,7 @@ body { background: #ffffff; overflow-x: hidden; }
 
         <div class="lp-port-grid" id="lpPortGrid">
 
-            <!-- ALL (8) -->
-            <div class="lp-port-item" data-cat="all"><a href="assets/images/portfolio/all/logo10-1024x1024.webp" data-fancybox="lp-gallery"><img src="assets/images/portfolio/all/logo10-1024x1024.webp" alt="Logo Design"></a></div>
-            <div class="lp-port-item" data-cat="all"><a href="assets/images/portfolio/all/logo13-1024x1024.webp" data-fancybox="lp-gallery"><img src="assets/images/portfolio/all/logo13-1024x1024.webp" alt="Logo Design"></a></div>
-            <div class="lp-port-item" data-cat="all"><a href="assets/images/portfolio/all/logo15-1024x1024.webp" data-fancybox="lp-gallery"><img src="assets/images/portfolio/all/logo15-1024x1024.webp" alt="Logo Design"></a></div>
-            <div class="lp-port-item" data-cat="all"><a href="assets/images/portfolio/all/logo20-1024x1024.webp" data-fancybox="lp-gallery"><img src="assets/images/portfolio/all/logo20-1024x1024.webp" alt="Logo Design"></a></div>
-            <div class="lp-port-item" data-cat="all"><a href="assets/images/portfolio/all/logo35-1024x1024.webp" data-fancybox="lp-gallery"><img src="assets/images/portfolio/all/logo35-1024x1024.webp" alt="Logo Design"></a></div>
-            <div class="lp-port-item" data-cat="all"><a href="assets/images/portfolio/all/logo39-1024x1024.webp" data-fancybox="lp-gallery"><img src="assets/images/portfolio/all/logo39-1024x1024.webp" alt="Logo Design"></a></div>
-            <div class="lp-port-item" data-cat="all"><a href="assets/images/portfolio/all/logo46-1024x1024.webp" data-fancybox="lp-gallery"><img src="assets/images/portfolio/all/logo46-1024x1024.webp" alt="Logo Design"></a></div>
-            <div class="lp-port-item" data-cat="all"><a href="assets/images/portfolio/all/logo9-1024x1024.webp" data-fancybox="lp-gallery"><img src="assets/images/portfolio/all/logo9-1024x1024.webp" alt="Logo Design"></a></div>
-
+      
             <!-- REAL ESTATE (7) -->
             <div class="lp-port-item" data-cat="estate"><a href="assets/images/portfolio/real-state/logo16-1024x1024.webp" data-fancybox="lp-gallery"><img src="assets/images/portfolio/real-state/logo16-1024x1024.webp" alt="Real Estate Logo"></a></div>
             <div class="lp-port-item" data-cat="estate"><a href="assets/images/portfolio/real-state/logo18-1024x1024.webp" data-fancybox="lp-gallery"><img src="assets/images/portfolio/real-state/logo18-1024x1024.webp" alt="Real Estate Logo"></a></div>
@@ -1477,7 +1523,7 @@ body { background: #ffffff; overflow-x: hidden; }
         </div>
         <div class="row pricing-cards">
 
-            <!-- Basic -->
+      <!-- Basic -->
             <div class="col-md-4 col-sm-12 col-12">
                 <div class="pricing-card-wrap">
                     <span class="pricing-plan-badge">Basic</span>
@@ -1500,7 +1546,6 @@ body { background: #ffffff; overflow-x: hidden; }
                             <li><i class="fas fa-check-circle"></i> 24-48 Hours TAT</li>
                             <li><i class="fas fa-check-circle"></i> File Formats (JPG)</li>
                             <li><i class="fas fa-check-circle"></i> 100% Ownership Rights</li>
-                            <li><i class="fas fa-check-circle"></i> 100% Money-Back Guarantee</li>
                             <li><i class="fas fa-check-circle"></i> 24/7 Expert Support</li>
                         </ul>
                         <a href="#" class="pricing-btn js-open-pkg" data-pkg-name="Basic" data-pkg-price="$18">Start Your Project</a>
@@ -1533,7 +1578,6 @@ body { background: #ffffff; overflow-x: hidden; }
                             <li><i class="fas fa-check-circle"></i> 24-48 Hours TAT</li>
                             <li><i class="fas fa-check-circle"></i> File Formats: PNG, JPG</li>
                             <li><i class="fas fa-check-circle"></i> 100% Ownership Rights</li>
-                            <li><i class="fas fa-check-circle"></i> 100% Money-Back Guarantee</li>
                             <li><i class="fas fa-check-circle"></i> 24/7 Expert Support</li>
                         </ul>
                         <a href="#" class="pricing-btn js-open-pkg" data-pkg-name="Standard" data-pkg-price="$75">Start Your Project</a>
@@ -1563,12 +1607,10 @@ body { background: #ffffff; overflow-x: hidden; }
                             <li><i class="fas fa-check-circle"></i> Free Stationery (Business Card, Letterhead)</li>
                             <li><i class="fas fa-check-circle"></i> Free Icon</li>
                             <li><i class="fas fa-check-circle"></i> Free Email Signature</li>
-                            <li><i class="fas fa-check-circle"></i> Social Media Designs (Any 3 Platforms)</li>
                             <li><i class="fas fa-check-circle"></i> Free Color Options &amp; Grayscale</li>
                             <li><i class="fas fa-check-circle"></i> 24-48 Hours TAT</li>
                             <li><i class="fas fa-check-circle"></i> File Formats: AI, PSD, EPS, PNG, JPG, PDF</li>
                             <li><i class="fas fa-check-circle"></i> 100% Ownership Rights</li>
-                            <li><i class="fas fa-check-circle"></i> 100% Money-Back Guarantee</li>
                             <li><i class="fas fa-check-circle"></i> 24/7 Expert Support</li>
                         </ul>
                         <a href="#" class="pricing-btn js-open-pkg" data-pkg-name="Advance" data-pkg-price="$125">Start Your Project</a>
@@ -1594,17 +1636,14 @@ body { background: #ffffff; overflow-x: hidden; }
                             <li><i class="fas fa-check-circle"></i> 8 Custom Logo Design Concepts</li>
                             <li><i class="fas fa-check-circle"></i> 6 Award-Winning Designers</li>
                             <li><i class="fas fa-check-circle"></i> Unlimited Revisions</li>
-                            <li><i class="fas fa-check-circle"></i> Social Media Banner</li>
                             <li><i class="fas fa-check-circle"></i> Free Icon Design</li>
                             <li><i class="fas fa-check-circle"></i> Free Custom Stationery (Letterhead, Business Card, Envelope, Invoice)</li>
-                            <li><i class="fas fa-check-circle"></i> Double-Side Flyer (OR) Bi-Fold Brochure</li>
-                            <li><i class="fas fa-check-circle"></i> Free MS Electronic Letterhead</li>
+                            <li><i class="fas fa-check-circle"></i> Social Media Designs (Any 3 Platforms)</li>
                             <li><i class="fas fa-check-circle"></i> Email Signature Design</li>
                             <li><i class="fas fa-check-circle"></i> $50 Off on Website Order</li>
                             <li><i class="fas fa-check-circle"></i> 48-72 Hours TAT</li>
                             <li><i class="fas fa-check-circle"></i> File Formats: AI, PSD, EPS, PNG, JPG, PDF</li>
                             <li><i class="fas fa-check-circle"></i> 100% Satisfaction &amp; Unique Design Guarantee</li>
-                            <li><i class="fas fa-check-circle"></i> 100% Money-Back Guarantee</li>
                             <li><i class="fas fa-check-circle"></i> 24/7 Expert Support</li>
                         </ul>
                         <a href="#" class="pricing-btn js-open-pkg" data-pkg-name="Premium" data-pkg-price="$175">Start Your Project</a>
@@ -1630,9 +1669,9 @@ body { background: #ffffff; overflow-x: hidden; }
                             <li><i class="fas fa-check-circle"></i> Unlimited Logo Concepts</li>
                             <li><i class="fas fa-check-circle"></i> 6 Award-Winning Designers</li>
                             <li><i class="fas fa-check-circle"></i> Unlimited Revisions</li>
-                            <li><i class="fas fa-check-circle"></i> Social Media Banner</li>
                             <li><i class="fas fa-check-circle"></i> Free Icon Design</li>
                             <li><i class="fas fa-check-circle"></i> Free Custom Stationery (Letterhead, Business Card, Envelope, Invoice)</li>
+                            <li><i class="fas fa-check-circle"></i> Social Media Designs (Any 3 Platforms)</li>
                             <li><i class="fas fa-check-circle"></i> Bi-Fold or Tri-Fold Brochure</li>
                             <li><i class="fas fa-check-circle"></i> Free MS Electronic Letterhead</li>
                             <li><i class="fas fa-check-circle"></i> Email Signature Design</li>
@@ -1666,13 +1705,14 @@ body { background: #ffffff; overflow-x: hidden; }
                             <li><i class="fas fa-check-circle"></i> Unlimited Custom Logo Concepts</li>
                             <li><i class="fas fa-check-circle"></i> 8 Award-Winning Designers</li>
                             <li><i class="fas fa-check-circle"></i> Unlimited Revisions</li>
-                            <li><i class="fas fa-check-circle"></i> 1 Website Prototype</li>
                             <li><i class="fas fa-check-circle"></i> Free Icon Design</li>
                             <li><i class="fas fa-check-circle"></i> Free Custom Stationery (Letterhead, Business Card, Envelope, Invoice)</li>
+                            <li><i class="fas fa-check-circle"></i> Social Media Designs (Any 3 Platforms)</li>
                             <li><i class="fas fa-check-circle"></i> Bi-Fold or Tri-Fold Brochure</li>
                             <li><i class="fas fa-check-circle"></i> Free MS Electronic Letterhead</li>
                             <li><i class="fas fa-check-circle"></i> Email Signature Design</li>
                             <li><i class="fas fa-check-circle"></i> $50 Off on Website Order</li>
+                            <li><i class="fas fa-check-circle"></i> 1 Website Prototype</li>
                             <li><i class="fas fa-check-circle"></i> 48-72 Hours TAT</li>
                             <li><i class="fas fa-check-circle"></i> File Formats: AI, PSD, EPS, PNG, JPG, PDF</li>
                             <li><i class="fas fa-check-circle"></i> 100% Satisfaction &amp; Unique Design Guarantee</li>
@@ -2226,15 +2266,14 @@ body { background: #ffffff; overflow-x: hidden; }
         </div>
     </div>
 </div>
+<?php
+require_once dirname(__DIR__) . '/inc/funnel-init.php';
+$lp_base_url = $base_url;
+?>
 
 <!-- ==================== SCRIPTS ==================== -->
-<?php
-$lp_base_url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off' ? 'https://' : 'http://')
-    . ($_SERVER['HTTP_HOST'] ?? 'localhost');
-$lp_base_url .= preg_replace('@/+$@', '', dirname($_SERVER['SCRIPT_NAME'] ?? '')) . '/';
-?>
 <script>window.LOGO_FUNNEL = true; window.SITE_BASE = <?php echo json_encode($lp_base_url); ?>;</script>
-<script src="../assets/js/api.js?v=<?php echo time(); ?>"></script>
+<script src="../assets/js/api.js?v=1781118697"></script>
 <script src="../assets/js/jquery-3.3.1.min.js"></script>
 <script src="../assets/js/bootstrap.bundle.min.js"></script>
 <script src="../assets/js/jquery.fancybox.min.js"></script>
@@ -2264,6 +2303,14 @@ document.querySelectorAll('.lp-ptab').forEach(function(tab) {
     });
 });
 
+// ── Show default active tab (Real Estate) on load ──
+document.querySelectorAll('#lpPortGrid .lp-port-item').forEach(function(item) {
+    if (item.getAttribute('data-cat') === 'estate') {
+        item.style.display = 'block';
+    } else {
+        item.style.display = 'none';
+    }
+});
 // ── FAQ accordion ──
 document.querySelectorAll('.lp-faq-q').forEach(function(q) {
     q.addEventListener('click', function() {
