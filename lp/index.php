@@ -2269,8 +2269,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <?php
 require_once dirname(__DIR__) . '/inc/funnel-init.php';
 $lp_base_url = $base_url;
-require_once dirname(__DIR__) . '/inc/funnel-init.php';
-$lp_base_url = $base_url;
+
 ?>
 
 <!-- ==================== SCRIPTS ==================== -->
