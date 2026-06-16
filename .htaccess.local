@@ -9,9 +9,11 @@ RewriteBase /vector/
 Options -Indexes
 DirectoryIndex index.php
 
-# .php extension URL se hatao
+# .php extension URL se hatao (lp/ excluded — payment links ?id= preserve karein)
+RewriteCond %{THE_REQUEST} !/lp/ [NC]
+RewriteCond %{REQUEST_URI} !^/vector/lp/ [NC]
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.php [NC]
-RewriteRule ^ %1 [R=301,L]
+RewriteRule ^ %1? [R=301,L,QSA]
 
 # Front controller — sab requests index.php par (lp/ apni .htaccess use karta hai)
 RewriteCond %{REQUEST_FILENAME} !-f

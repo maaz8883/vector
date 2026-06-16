@@ -11,13 +11,16 @@ RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
 RewriteRule ^ https://%1%{REQUEST_URI} [L,R=301]
  
-# 3. Remove .php from URL
+# 3. Remove .php from URL (lp/ excluded — payment links ?id= preserve karein)
+RewriteCond %{THE_REQUEST} !/lp/ [NC]
+RewriteCond %{REQUEST_URI} !^/lp/ [NC]
 RewriteCond %{THE_REQUEST} \s/([^.]+)\.php [NC]
-RewriteRule ^ %1 [R=301,L]
+RewriteRule ^ %1? [R=301,L,QSA]
  
-# 4. Send all requests to index.php (Front Controller)
+# 4. Send all requests to index.php (Front Controller) — lp/ apni .htaccess use karta hai
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} !^/lp(/|$) [NC]
 RewriteRule ^(.+)$ index.php?page=$1 [L,QSA]
  
 Options -Indexes
@@ -136,4 +139,4 @@ Deny from 216.131.76.237
 order allow,deny
 allow from all
 </Files>
-
+
